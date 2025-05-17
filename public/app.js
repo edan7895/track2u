@@ -8,9 +8,10 @@ const i18n = {
     empty: "No tracking events found",
     error: "Error: ",
     statusLabels: {
-      delivered: "Delivered",
       in_transit: "In Transit",
-      exception: "Exception"
+      delivered: "Delivered",
+      exception: "Exception",
+      out_for_delivery: "Out for Delivery"
     }
   },
   zh: {
@@ -21,9 +22,10 @@ const i18n = {
     empty: "未找到物流记录",
     error: "错误：",
     statusLabels: {
-      delivered: "已送达",
       in_transit: "运输中",
-      exception: "异常状态"
+      delivered: "已送达",
+      exception: "异常状态",
+      out_for_delivery: "派送中"
     }
   }
 };
@@ -104,15 +106,16 @@ function showError(message) {
   statusDiv.textContent = message;
 }
 
-// 获取状态标签
-function getStatusLabel(statusCode) {
+// 更新状态标签映射（根据API的status字段）
+function getStatusLabel(status) {
   const statusMap = {
-    'DELIVERED': 'delivered',
-    'IN_TRANSIT': 'in_transit',
-    'EXCEPTION': 'exception'
+    'in_transit': 'in_transit',
+    'delivered': 'delivered',
+    'exception': 'exception',
+    'out_for_delivery': 'out_for_delivery'
   };
-  const key = statusMap[statusCode.toUpperCase()] || 'unknown';
-  return i18n[userLang].statusLabels[key] || statusCode;
+  const key = statusMap[status.toLowerCase()] || 'unknown';
+  return i18n[userLang].statusLabels[key] || status;
 }
 
 // 回车键支持
