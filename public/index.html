@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO 优化 -->
+  <title>Global Logistics Tracker - 全球快递查询</title>
+  <meta name="description" content="支持全球200+快递公司的免费物流查询服务，自动识别中英文界面">
+  <meta name="keywords" content="快递查询,物流跟踪,17Track,国际快递">
+  <meta property="og:image" content="https://your-domain.com/logo.png">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 data-i18n="title">Global Logistics Tracker</h1>
+    
+    <div class="search-box">
+      <input type="text" id="trackingNumber" placeholder="Enter tracking number">
+      <button onclick="searchTracking()" data-i18n="search">查询</button>
+    </div>
+
+    <div id="result" class="timeline"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

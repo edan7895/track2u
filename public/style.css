@@ -1,0 +1,89 @@
+/* 基础样式 */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui;
+  margin: 0;
+  background: #f5f6fa;
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+.search-box {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 0.8rem 2rem;
+  background: var(--secondary-color);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* 时间线样式 */
+.timeline {
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: #ddd;
+}
+
+.event {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 30px;
+}
+
+.event::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+}
