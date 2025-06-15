@@ -1,0 +1,53 @@
+{
+  "version": 2,
+  "public": true,
+  "cleanUrls": false,
+  "trailingSlash": false,
+
+  "rewrites": [
+  
+
+    { "source": "/en", "destination": "/index-en.html" },
+    { "source": "/zh", "destination": "/index-zh.html" },
+    { "source": "/de", "destination": "/index-de.html" },
+    { "source": "/fr", "destination": "/index-fr.html" },
+    { "source": "/es", "destination": "/index-es.html" },
+
+   
+    { "source": "/about-en", "destination": "/about-en.html" },
+    { "source": "/about-zh", "destination": "/about-zh.html" },
+    { "source": "/about-de", "destination": "/about-de.html" },
+    { "source": "/about-fr", "destination": "/about-fr.html" },
+    { "source": "/about-es", "destination": "/about-es.html" },
+
+    { "source": "/privacy-en", "destination": "/privacy-en.html" },
+    { "source": "/privacy-zh", "destination": "/privacy-zh.html" },
+    { "source": "/privacy-de", "destination": "/privacy-de.html" },
+    { "source": "/privacy-fr", "destination": "/privacy-fr.html" },
+    { "source": "/privacy-es", "destination": "/privacy-es.html" },
+
+    { "source": "/terms-en", "destination": "/terms-en.html" },
+    { "source": "/terms-zh", "destination": "/terms-zh.html" },
+    { "source": "/terms-de", "destination": "/terms-de.html" },
+    { "source": "/terms-fr", "destination": "/terms-fr.html" },
+    { "source": "/terms-es", "destination": "/terms-es.html" },
+
+  
+    {
+      "source": "/:lang(zh|en|de|fr|es)/(health|finance|education|engineering|daily-life|games|generator)/:file*",
+      "destination": "/:lang/:2/:file*.html"
+    }
+  ],
+
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Language" content="auto" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Calculator2U - Multifunction Calculators Platform</title>
+<meta name="description" content="Calculator2U offers a variety of practical calculators covering health, finance, education, and engineering to help you live more efficiently." />
+<meta name="keywords" content="calculator, health calculator, finance calculator, education calculator, engineering calculator, multifunction calculators, calculation tools" />
+<meta name="author" content="Calculator2U" />
+<link rel="canonical" href="https://www.calculator2u.com/index-en.html" />
+<link rel=" hreflang="en" href="https://www.calculator2u.com/index-en.html"/>
+<link rel=" hreflang="zh" href="https://www.calculator2u.com/index-zh.html"/>
+<link rel=" hreflang="es" href="https://www.calculator2u.com/index-es.html"/>
+<link rel=" hreflang="fr" href="https://www.calculator2u.com/index-fr.html"/>
+<link rel=" hreflang="de" href="https://www.calculator2u.com/index-de.html"/>
+<link rel=" hreflang="x-default" href="https://www.calculator2u.com/index-en.html"/>
+<meta property="og:title" content="Calculator2U - Multifunction Calculators" />
+<meta property="og:description" content="Calculator2U offers a variety of practical calculators covering health, finance, education, and engineering to help you live more efficiently." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.calculator2u.com/index-en.html" />
+<meta property="og:image" content="https://www.calculator2u.com/assets/images/banner.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Calculator2U" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RLH4FLZBZF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RLH4FLZBZF');
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e6f7ff 100%);
+  }
+
+  /* Header & Navigation */
+  header {
+    background-color: #006d77;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .navbar .logo {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-icon {
+    margin-right: 10px;
+    font-size: 1.8rem;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-left: 0;
+    margin: 0;
+    align-items: center;
+    transition: all 0.4s ease;
+  }
+
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+    .lang-switch {
+      background: transparent;
+      border: 1.5px solid #fff;
+      color: #fff;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      user-select: none;
+      transition: background-color 0.3s, color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .lang-switch:hover {
+      background-color: #fff;
+      color: #006d77;
+    }
+
+    .lang-switch i {
+      font-size: 0.8rem;
+    }
+
+    .language-selector {
+      position: relative;
+      display: inline-block;
+    }
+
+    .language-dropdown {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      margin-top: 0.5rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      width: 160px;
+      overflow: hidden;
+      z-index: 110;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+    }
+
+    .language-selector.active .language-dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .language-dropdown a {
+      display: flex;
+      align-items: center;
+      padding: 0.8rem 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: all 0.2s;
+      gap: 0.8rem;
+    }
+
+    .language-dropdown a:hover {
+      background-color: #f0f9ff;
+    }
+
+    .language-dropdown a i {
+      font-size: 1.2rem;
+      width: 24px;
+      text-align: center;
+    }
+
+    .lang-flag {
+      display: inline-block;
+      width: 20px;
+      height: 15px;
+      background-size: cover;
+      border-radius: 2px;
+    }
+
+    .flag-en {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="60" height="30"><clipPath id="a"><path d="M0 0v30h60V0z"/></clipPath><clipPath id="b"><path d="M30 15h30v15zv15H0zH0V0zV0h30z"/></clipPath><g clip-path="url(#a)"><path d="M0 0v30h60V0z" fill="#012169"/><path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30m0-30L0 30" clip-path="url(#b)" stroke="#C8102E" stroke-width="4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></g></svg>');
+    }
+
+    .flag-zh {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480"><rect width="640" height="480" fill="#de2910"/><g fill="#ffde00"><path d="m228 119.6 77.4-30.1-44.3 76.4 14.7 83.5-72.9-47.8-72.7 48.2 14.5-83.5-44-76.4 77.4 30z"/><path d="M243.3 258.7a24.8 24.8 0 1 0 0-49.7 24.8 24.8 0 0 0 0 49.7z"/></g></svg>');
+    }
+
+    .flag-es {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480"><path fill="#c60b1e" d="M0 0h640v480H0z"/><path fill="#ffc400" d="M0 120h640v240H0z"/></svg>');
+    }
+
+    .flag-de {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480"><path fill="#ffce00" d="M0 320h640v160H0z"/><path d="M0 0h640v160H0z"/><path fill="#d00" d="M0 160h640v160H0z"/></svg>');
+    }
+
+    .flag-fr {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480"><path fill="#fff" d="M0 0h640v480H0z"/><path fill="#002654" d="M0 0h213.3v480H0z"/><path fill="#ce1126" d="M426.7 0H640v480H426.7z"/></svg>');
+    }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+  }
+
+  .hamburger:focus {
+    outline: none;
+  }
+
+  .hamburger div {
+    width: 2rem;
+    height: 0.25rem;
+    background: #fff;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, #006d77 0%, #008891 100%);
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .stat-item {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1.5rem;
+    border-radius: 10px;
+    min-width: 200px;
+    backdrop-filter: blur(10px);
+  }
+
+  .stat-item i {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #ffd166;
+  }
+
+  .stat-item h3 {
+    font-size: 2.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .stat-item p {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  /* Main Content */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 0 1.5rem;
+    text-align: center;
+    flex: 1;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #006d77;
+  }
+
+  .subtitle {
+    margin-bottom: 2rem;
+    color: #555;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+    margin-bottom: 3rem;
+  }
+
+  .category-card {
+    background-color: #fff;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid rgba(0, 109, 119, 0.1);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .category-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #008891;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .category-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .category-card i {
+    font-size: 3rem;
+    color: #008891;
+    margin-bottom: 1.2rem;
+  }
+
+  .category-card h2 {
+    margin-top: 0;
+    font-size: 1.6rem;
+    color: #008891;
+    margin-bottom: 0.8rem;
+  }
+
+  .category-card p {
+    color: #666;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  /* Features Section */
+  .features {
+    background-color: #fff;
+    padding: 4rem 1rem;
+    margin: 3rem 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  }
+
+  .features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .feature-card i {
+    font-size: 2.5rem;
+    color: #008891;
+    margin-bottom: 1rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.4rem;
+    color: #006d77;
+    margin-bottom: 0.8rem;
+  }
+
+  .feature-card p {
+    color: #555;
+    line-height: 1.6;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #006d77;
+    color: #fff;
+    padding: 3rem 1rem;
+    margin-top: auto;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .footer-column h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+
+  .footer-column h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #4db5bd;
+  }
+
+  .footer-links {
+    list-style: none;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.7rem;
+  }
+
+  .footer-links a {
+    color: #e0f7fa;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 0.3rem 0;
+  }
+
+  .footer-links a:hover {
+    color: #fff;
+    transform: translateX(5px);
+  }
+
+  .copyright {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: #c1eef2;
+  }
+
+  .copyright a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .copyright a:hover {
+    text-decoration: underline;
+  }
+
+  /* Language Switch Banner */
+  .lang-banner {
+    background-color: #ffd166;
+    color: #333;
+    padding: 0.8rem;
+    text-align: center;
+    font-weight: 500;
+    position: relative;
+  }
+
+  .lang-banner-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .lang-banner .close-btn {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.5rem;
+  }
+
+  /* Media Queries for Responsive Design */
+  @media (max-width: 992px) {
+    .category-grid {
+      gap: 1.5rem;
+    }
+    
+    .category-card {
+      padding: 1.8rem 1.2rem;
+    }
+    
+    .stat-item {
+      min-width: 180px;
+      padding: 1.2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 1rem;
+    }
+    
+    .hamburger {
+      display: flex;
+    }
+    
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #006d77;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.5rem 2rem;
+      gap: 0;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      transform: translateY(-150%);
+      opacity: 0;
+    }
+    
+    .nav-links.active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    
+    .nav-links li {
+      width: 100%;
+      margin: 0.5rem 0;
+    }
+    
+    .nav-links a {
+      display: block;
+      width: 100%;
+      padding: 0.8rem 1rem;
+    }
+    
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+    
+    .hero p {
+      font-size: 1.1rem;
+    }
+    
+    .stat-item h3 {
+      font-size: 1.8rem;
+    }
+    
+    .container {
+      margin: 1.5rem auto;
+      padding: 0 1rem;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+    
+    .subtitle {
+      font-size: 1.1rem;
+    }
+    
+    .features {
+      padding: 2.5rem 1rem;
+    }
+    
+    .feature-card {
+      padding: 1.2rem;
+    }
+
+    .language-dropdown {
+      position: fixed;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      border-radius: 12px 12px 0 0;
+      max-height: 70vh;
+      overflow-y: auto;
+      transform: translateY(100%);
+    }
+
+    .language-selector.active .language-dropdown {
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 576px) {
+    .category-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .category-card {
+      padding: 1.5rem 1rem;
+    }
+    
+    .category-card i {
+      font-size: 2.5rem;
+    }
+    
+    .category-card h2 {
+      font-size: 1.4rem;
+    }
+    
+    .category-card p {
+      font-size: 1rem;
+    }
+    
+    .hero-stats {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .stat-item {
+      width: 100%;
+      max-width: 300px;
+    }
+    
+    .features-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .footer-container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+  <!-- Language switch banner -->
+  <div class="lang-banner" id="langBanner">
+    <div class="lang-banner-content">
+      <span>Switch language:</span>
+      <div class="lang-options">
+        <a href="/index-zh.html" class="lang-option">中文</a>
+        <a href="/index-es.html" class="lang-option">Español</a>
+        <a href="/index-de.html" class="lang-option">Deutsch</a>
+        <a href="/index-fr.html" class="lang-option">Français</a>
+      </div>
+    </div>
+    <button class="close-btn" id="closeLangBanner">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  
+  <header>
+    <nav class="navbar">
+      <a href="/index-en.html" class="logo">
+        <i class="fas fa-calculator logo-icon"></i>
+        Calculator2U
+      </a>
+      
+      <button class="hamburger" id="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </button>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/en/health/index.html" class="active"></i> Health & Body</a></li>
+        <li><a href="/en/finance/index.html"></i> Finance & Investment</a></li>
+        <li><a href="/en/education/index.html"></i> Education & Learning</a></li>
+        <li><a href="/en/engineering/index.html"></i> Engineering & Science</a></li>
+        <li><a href="/en/daily-life/index.html"></i> Work & Life</a></li>
+        <li><a href="/en/generator/index.html"></i> Generator</a></li>
+        <li><a href="/en/games/index.html"></i> Games</a></li>
+        <li><a href="/about-en.html"></i> About Us</a></li>
+        <li>
+          <div class="language-selector" id="languageSelector">
+            <button class="lang-switch">
+              <span class="lang-flag flag-en"></span>
+              English
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="language-dropdown">
+              <a href="/index-en.html">
+                <span class="lang-flag flag-en"></span>
+                English
+              </a>
+              <a href="/index-zh.html">
+                <span class="lang-flag flag-zh"></span>
+                中文
+              </a>
+              <a href="/index-es.html">
+                <span class="lang-flag flag-es"></span>
+                Español
+              </a>
+              <a href="/index-de.html">
+                <span class="lang-flag flag-de"></span>
+                Deutsch
+              </a>
+              <a href="/index-fr.html">
+                <span class="lang-flag flag-fr"></span>
+                Français
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Health & Body Calculators</h1>
+    <p>Comprehensive tools to help you understand and improve your health. Track your fitness progress, plan your nutrition, and manage your wellbeing.</p>
+    
+    <div class="hero-stats">
+      <div class="stat-item">
+        <i class="fas fa-users"></i>
+        <h3>500K+</h3>
+        <p>Monthly Users</p>
+      </div>
+      <div class="stat-item">
+        <i class="fas fa-calculator"></i>
+        <h3>25+</h3>
+        <p>Calculators</p>
+      </div>
+      <div class="stat-item">
+        <i class="fas fa-globe"></i>
+        <h3>100+</h3>
+        <p>Countries</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <h1>Calculator2U - Multifunction Calculators Platform</h1>
+    <p class="subtitle">Choose a category below to quickly find the calculator you need. Whether you're at home, in the office, or on the go, our calculators work perfectly on any device.</p>
+
+    <div class="category-grid">
+      <a href="/en/health/index.html" class="category-card">
+        <i class="fas fa-heartbeat"></i>
+        <h2>Health & Body</h2>
+        <p>BMI, body fat percentage, BMR and other health calculators to help you manage your health.</p>
+      </a>
+      <a href="/en/finance/index.html" class="category-card">
+        <i class="fas fa-chart-line"></i>
+        <h2>Finance & Investment</h2>
+        <p>Loan, ROI, tax calculators and more to help you plan your finances.</p>
+      </a>
+      <a href="/en/education/index.html" class="category-card">
+        <i class="fas fa-graduation-cap"></i>
+        <h2>Education & Learning</h2>
+        <p>Grade calculators, time management, study planners to enhance your learning efficiency.</p>
+      </a>
+      <a href="/en/engineering/index.html" class="category-card">
+        <i class="fas fa-cogs"></i>
+        <h2>Engineering & Science</h2>
+        <p>Physics, chemistry, and engineering calculation tools for professional problem-solving.</p>
+      </a>
+      <a href="/en/daily-life/index.html" class="category-card">
+        <i class="fas fa-home"></i>
+        <h2>Daily Life</h2>
+        <p>Shopping, diet, time conversion calculators to make your life more convenient.</p>
+      </a>
+      <a href="/en/generator/index.html" class="category-card">
+        <i class="fa fa-envelope"></i>
+        <h2>Generator</h2>
+        <p>Password, random numbers, QR codes and other generators for various needs.</p>
+      </a>
+      <a href="/en/games/index.html" class="category-card">
+        <i class="fas fa-gamepad"></i>
+        <h2>Games</h2>
+        <p>Puzzles and mathematical challenges to exercise your mind while having fun.</p>
+      </a>
+    </div>
+
+    <div class="features">
+      <div class="features-container">
+        <div class="feature-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Fully Responsive</h3>
+          <p>Our calculators work perfectly on mobile, tablet, and desktop devices, wherever you are.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-bolt"></i>
+          <h3>Fast Calculations</h3>
+          <p>All calculators are optimized to provide instant results without delay, increasing your productivity.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-lock"></i>
+          <h3>Privacy Protection</h3>
+          <p>We don't store any of your calculation data on our servers. All calculations are done on your device.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Calculator2U</h3>
+        <p>Provides a variety of practical calculators covering health, finance, education, engineering and more to help you live efficiently.</p>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="/index-en.html">Home</a></li>
+          <li><a href="/en/health/index.html">Health & Body</a></li>
+          <li><a href="/en/finance/index.html">Finance & Investment</a></li>
+          <li><a href="/about-en.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Legal Information</h3>
+        <ul class="footer-links">
+          <li><a href="/privacy-en.html">Privacy Policy</a></li>
+          <li><a href="/terms-en.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 Calculator2U. All rights reserved. | 
+        <a href="/privacy-en.html">Privacy Policy</a> | 
+        <a href="/terms-en.html">Terms of Service</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      // Hamburger menu functionality
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
+      
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+      });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', (event) => {
+        const isClickInsideNav = navLinks.contains(event.target) || hamburger.contains(event.target);
+        if (!isClickInsideNav && navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+          hamburger.classList.remove('active');
+        }
+      });
+
+      // Language selector functionality
+      const languageSelector = document.getElementById('languageSelector');
+      const langBanner = document.getElementById('langBanner');
+      const closeLangBanner = document.getElementById('closeLangBanner');
+      
+      // Toggle language dropdown
+      languageSelector.addEventListener('click', (e) => {
+        e.stopPropagation();
+        languageSelector.classList.toggle('active');
+      });
+      
+      // Close dropdown when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!languageSelector.contains(e.target)) {
+          languageSelector.classList.remove('active');
+        }
+      });
+      
+      // Close banner functionality
+      closeLangBanner.addEventListener('click', () => {
+        langBanner.style.display = 'none';
+      });
+      
+      // Set banner visibility based on previous state
+      if (!localStorage.getItem('langBannerClosed')) {
+        langBanner.style.display = 'block';
+      } else {
+        langBanner.style.display = 'none';
+      }
+      
+      // Remember banner closed state
+      closeLangBanner.addEventListener('click', () => {
+        localStorage.setItem('langBannerClosed', 'true');
+      });
+      
+      // Prevent dropdown from closing when clicking inside
+      document.querySelector('.language-dropdown').addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+    })();
+  </script>
+</body>
+</html>

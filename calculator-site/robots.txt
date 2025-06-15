@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://calculator2u.com/sitemap.xml
