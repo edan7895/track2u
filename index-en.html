@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Book of Answers Online - Get Instant Guidance for Your Questions</title>
+  <meta name="description" content="Experience The Book of Answers online. Ask your question, click the button, and receive guidance instantly with over 300 possible answers.">
+  <meta name="keywords" content="Book of Answers, online oracle, decision making, fortune telling, ask a question, life guidance, random answers, yes or no, decision helper">
+  <meta property="og:title" content="The Book of Answers Online - Get Instant Guidance">
+  <meta property="og:description" content="Ask your question and let The Book of Answers surprise you with instant guidance. Over 300 possible answers!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/index-en.html">
+  <meta property="og:image" content="https://yourdomain.com/cover.jpg">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "The Book of Answers Online",
+    "description": "An online oracle based on the popular Book of Answers, providing guidance for life's questions.",
+    "applicationCategory": "EntertainmentApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "The Book of Answers"
+    }
+  }
+  </script>
+  
+  <style>
+    :root {
+      --primary-color: #5d4e75;
+      --secondary-color: #9c89b8;
+      --accent-color: #f0a6ca;
+      --light-color: #f8f5ff;
+      --text-color: #333;
+      --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      --gradient: linear-gradient(135deg, #9c89b8 0%, #f0a6ca 100%);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #f8f5ff 0%, #e6e0ff 100%);
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    header {
+      background: var(--primary-color);
+      color: var(--light-color);
+      padding: 1.2rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .logo i {
+      font-size: 2rem;
+      color: var(--accent-color);
+    }
+    
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    
+    nav a {
+      color: var(--light-color);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: all 0.3s;
+      font-weight: 500;
+    }
+    
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
+    
+    .language-selector {
+      position: relative;
+    }
+    
+    .language-dropdown {
+      background: var(--light-color);
+      color: var(--primary-color);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      appearance: none;
+      padding-right: 2rem;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%235d4e75' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.7rem top 50%;
+      background-size: 16px 12px;
+    }
+    
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--light-color);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: var(--primary-color);
+      flex-direction: column;
+      padding: 1rem;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    
+    .mobile-menu.active {
+      display: flex;
+    }
+    
+    .mobile-menu a {
+      color: var(--light-color);
+      text-decoration: none;
+      padding: 0.8rem 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+    
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      flex: 1;
+    }
+    
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--gradient);
+      border-radius: 3px;
+    }
+    
+    p {
+      margin-bottom: 1.2rem;
+    }
+    
+    .book-container {
+      perspective: 1500px;
+      margin: 3rem auto;
+      width: 320px;
+      height: 420px;
+    }
+    
+    .book {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .book.flipped {
+      transform: rotateY(-180deg);
+    }
+    
+    .book-cover, .book-page {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+    
+    .book-cover {
+      background: linear-gradient(135deg, var(--primary-color) 0%, #7b6b9c 100%);
+      color: white;
+      text-align: center;
+      cursor: pointer;
+      border: 8px solid #f0a6ca;
+    }
+    
+    .book-cover h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .book-cover p {
+      font-style: italic;
+      margin-top: 1rem;
+    }
+    
+    .book-page {
+      background: #fffdf7;
+      transform: rotateY(180deg);
+      border: 1px solid #e6d8c3;
+      text-align: center;
+      font-size: 1.3rem;
+      line-height: 1.5;
+      color: var(--primary-color);
+      font-weight: 500;
+      background-image: linear-gradient(#f9f5eb 1px, transparent 1px);
+      background-size: 100% 1.5em;
+      background-position: 0 1.2em;
+    }
+    
+    .book-page .answer-text {
+      padding: 1rem;
+      font-family: 'Georgia', serif;
+      font-style: italic;
+    }
+    
+    .ask-button {
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
+      background: var(--gradient);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: var(--shadow);
+      display: block;
+      margin: 2rem auto;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+    
+    .ask-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+    
+    .ask-button:active {
+      transform: translateY(-1px);
+    }
+    
+    .instructions {
+      text-align: center;
+      margin-top: 1rem;
+      color: #666;
+      font-style: italic;
+    }
+    
+    .features {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    
+    .feature {
+      text-align: center;
+      flex: 1;
+      min-width: 200px;
+      padding: 1.5rem;
+      border-radius: 10px;
+      background: var(--light-color);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+    
+    .feature i {
+      font-size: 2.5rem;
+      color: var(--secondary-color);
+      margin-bottom: 1rem;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: var(--primary-color);
+      color: var(--light-color);
+      margin-top: auto;
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      .header-content {
+        flex-wrap: wrap;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+      
+      .hamburger {
+        display: block;
+      }
+      
+      main {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+      
+      .book-container {
+        width: 280px;
+        height: 370px;
+      }
+      
+      .book-cover h3 {
+        font-size: 1.7rem;
+      }
+      
+      .book-page {
+        font-size: 1.1rem;
+      }
+      
+      .features {
+        flex-direction: column;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+      
+      .book-container {
+        width: 250px;
+        height: 340px;
+      }
+      
+      .book-cover h3 {
+        font-size: 1.5rem;
+      }
+      
+      .book-page {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <i class="fas fa-book-open"></i>
+        <h1>The Book of Answers</h1>
+      </div>
+      
+      <nav>
+        <div class="nav-links">
+          <a href="index-en.html">Home</a>
+<a href="how-it-work-en.html">How It Work</a>
+          <a href="about-en.html">About Us</a>
+          <a href="privacy-en.html">Privacy</a>
+          <a href="terms-en.html">Terms of Use</a>
+          <a href="contact-en.html">Contact Us</a>
+        </div>
+        
+        <div class="language-selector">
+          <select class="language-dropdown" id="language-select">
+            <option value="index-en.html">English</option>
+            <option value="index-zh.html">中文</option>
+            <option value="index-es.html">Español</option>
+            <option value="index-de.html">Deutsch</option>
+            <option value="index-fr.html">Français</option>
+          </select>
+        </div>
+        
+        <button class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+    
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index-en.html">Home</a>
+<a href="how-it-work-en.html">How It Work</a>
+      <a href="about-en.html">About Us</a>
+      <a href="privacy-en.html">Privacy</a>
+          <a href="terms-en.html">Terms of Use</a>
+          <a href="contact-en.html">Contact Us</a>
+    </div>
+  </header>
+
+  <main>
+    <h2>Welcome to The Book of Answers Online</h2>
+    <p>
+      The Book of Answers is a unique and inspiring way to gain perspective on your questions.
+      First created by Carol Bolt, this book has captivated readers by offering short but meaningful answers to life's uncertainties.
+      Now, you can enjoy this experience online.
+    </p>
+    <p>
+      Simply focus on a question in your mind, click the book below, and allow the Book of Answers to provide its wisdom.
+      With over <strong>300 possible responses</strong>, each answer is designed to inspire reflection, spark new thoughts, or confirm your inner voice.
+    </p>
+
+    <h2>Ask the Book</h2>
+    <p class="instructions">Focus on your question, then click the book to reveal your answer</p>
+    
+    <div class="book-container">
+      <div class="book" id="book">
+        <div class="book-cover" onclick="getAnswer()">
+          <h3>The Book of Answers</h3>
+          <p>Click to open</p>
+          <i class="fas fa-hand-point-up" style="font-size: 2rem; margin-top: 1rem;"></i>
+        </div>
+        <div class="book-page">
+          <div class="answer-text" id="answer-box"></div>
+        </div>
+      </div>
+    </div>
+    
+    <button class="ask-button" onclick="getAnswer()">Ask a New Question</button>
+
+
+<h2>The Origin of The Book of Answers</h2>
+<p>
+The <strong>Book of Answers</strong> was first created by <strong>Carol Bolt</strong>, an artist and author known for blending creativity with intuitive wisdom. 
+Her idea was simple yet profound — a book that could respond to your questions with short, poetic, and thought-provoking answers. 
+Since its first publication, it has inspired millions around the world to pause, reflect, and trust their inner voice. 
+Today, the <strong>Book of Answers Online</strong> continues this legacy by bringing that same magic to your screen, offering instant access to guidance and inspiration wherever you are.
+</p>
+
+<h2>How the Online Book of Answers Works</h2>
+<p>
+The experience is both playful and meaningful. Simply think deeply about your question — it could be about love, career, decisions, or destiny. 
+When you’re ready, click on the virtual book. 
+The system will present a random yet meaningful response drawn from over <strong>300 unique answers</strong>. 
+Each message is designed to feel personal, like a whisper from the universe. 
+People often describe the <strong>Book of Answers Online</strong> as a digital oracle — a space where coincidence and intuition meet. 
+It reminds us that wisdom doesn’t always come from logic alone, but from listening to the subtle guidance within.
+</p>
+
+<h2>The Philosophy Behind the Book</h2>
+<p>
+At its heart, the <strong>Book of Answers</strong> is not about predicting the future — it’s about helping you connect with your own awareness. 
+When we ask a question with sincerity, we often already hold the answer deep inside us. 
+The book acts as a mirror, reflecting your subconscious understanding back to you in words that feel just right for the moment. 
+This practice aligns with ancient traditions of divination and mindfulness, where randomness is seen not as chaos, but as a form of cosmic order. 
+Many readers find that even if two people ask the same question, the message that appears speaks uniquely to their own situation.
+</p>
+
+<h2>From Printed Pages to Digital Wisdom</h2>
+<p>
+The original printed version of <em>The Book of Answers</em> invited readers to open the book at any page and read the first response they found. 
+Now, the <strong>online version</strong> captures that same sense of mystery through modern technology. 
+With a simple click, users can experience what feels like a meaningful coincidence — the right words appearing at the right time. 
+In a world filled with data and decisions, the <strong>Book of Answers Online</strong> offers a quiet space for reflection, mindfulness, and spiritual exploration. 
+It’s not just entertainment; it’s a reminder to slow down, breathe, and trust the unfolding of life.
+</p>
+
+<h2>Why People Love the Book of Answers</h2>
+<p>
+The enduring charm of the Book lies in its simplicity. 
+Unlike complex fortune-telling methods, this tool is intuitive and immediate. 
+People use it to seek comfort, clarity, or even a touch of magic during uncertain times. 
+Some users turn to it daily for inspiration, while others consult it only when facing big life choices. 
+In either case, the message often resonates deeply. 
+Readers describe feelings of calm, insight, or renewed motivation after using the <strong>Book of Answers Online</strong>. 
+It’s a small ritual that brings a moment of peace in a busy world.
+</p>
+
+<h2>How to Get the Most from Your Reading</h2>
+<p>
+To fully enjoy your <strong>online Book of Answers</strong> experience, take a moment to center yourself before asking. 
+Close your eyes, focus on your breath, and form your question clearly in your mind. 
+Then, click the book and allow the response to appear without judgment. 
+Sometimes the answer will be direct, other times it will be symbolic. 
+Reflect on what it means to you personally. 
+You can even keep a journal of your questions and the answers you receive — over time, patterns and insights may emerge, helping you understand your own journey better.
+</p>
+
+<h2>A Modern Tool for Reflection and Mindfulness</h2>
+<p>
+More than a digital curiosity, the <strong>Book of Answers Online</strong> represents the union of technology and spirituality. 
+It’s a gentle reminder that even in the digital age, wisdom can still be found in silence and simplicity. 
+By engaging with this online oracle, you are practicing mindfulness — tuning into your intuition, your feelings, and your inner truth. 
+Each session becomes a mini meditation, guiding you toward self-awareness and balance. 
+Whether you believe in coincidence, destiny, or the subconscious mind, the Book of Answers invites you to explore the mystery of meaning itself.
+</p>
+
+<h2>Final Thoughts</h2>
+<p>
+In a fast-moving world, we often seek quick answers. 
+The <strong>Book of Answers Online</strong> offers something deeper — not just answers, but perspective. 
+It reminds us that life’s greatest insights often come when we pause and listen. 
+So the next time you’re uncertain, let this digital oracle be your gentle companion. 
+Ask, click, reflect, and discover what the universe may be whispering to you today.
+</p>
+
+<!-- SEO Keywords -->
+<p style="display:none;">
+Keywords: Book of Answers online, ask the book of answers, digital oracle, online fortune book, Carol Bolt, spiritual guidance tool, online divination, mindful reflection, intuitive answers, virtual wisdom book.
+</p>
+
+    
+    <div class="features">
+      <div class="feature">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Instant Guidance</h3>
+        <p>Receive immediate answers to your pressing questions</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-globe"></i>
+        <h3>Multiple Languages</h3>
+        <p>Available in English, Chinese, Spanish and more</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Mobile Friendly</h3>
+        <p>Use on any device, anywhere, anytime</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 The Book of Answers | All Rights Reserved | <a href="privacy-en.html" style="color: var(--light-color);">Privacy Policy</a> | <a href="terms-en.html" style="color: var(--light-color);">Terms of Service</a>
+  </footer>
+
+  <script>
+    // Answers array
+    const answers = [
+      "Yes, definitely.",
+
+    ];
+
+    // Get answer function with book flip animation
+    function getAnswer() {
+      const book = document.getElementById('book');
+      const answerBox = document.getElementById('answer-box');
+      
+      // If the book is already flipped, reset it first
+      if (book.classList.contains('flipped')) {
+        book.classList.remove('flipped');
+        
+        // Wait for the flip back animation to complete
+        setTimeout(() => {
+          const randomIndex = Math.floor(Math.random() * answers.length);
+          answerBox.textContent = answers[randomIndex];
+          book.classList.add('flipped');
+        }, 600);
+      } else {
+        // First time flipping
+        const randomIndex = Math.floor(Math.random() * answers.length);
+        answerBox.textContent = answers[randomIndex];
+        book.classList.add('flipped');
+      }
+    }
+
+    // Mobile menu toggle
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('active');
+    });
+
+    // Language selector functionality
+    document.getElementById('language-select').addEventListener('change', function() {
+      window.location.href = this.value;
+    });
+
+    // Auto-detect user language and set dropdown accordingly
+    function detectLanguage() {
+      const userLang = navigator.language || navigator.userLanguage;
+      const langSelect = document.getElementById('language-select');
+      
+      // Map browser languages to our available options
+      const langMap = {
+        'zh': 'index-zh.html',
+        'es': 'index-es.html',
+        'de': 'index-de.html',
+        'fr': 'index-fr.html'
+      };
+      
+      // Check if the user's language is in our map
+      const langCode = userLang.split('-')[0];
+      if (langMap[langCode] && window.location.pathname.endsWith('index-en.html')) {
+        // Only redirect if we're on the English page and user prefers another language
+        window.location.href = langMap[langCode];
+      }
+      
+      // Set the dropdown to current language
+      const currentPage = window.location.pathname.split('/').pop();
+      for (let i = 0; i < langSelect.options.length; i++) {
+        if (langSelect.options[i].value === currentPage) {
+          langSelect.selectedIndex = i;
+          break;
+        }
+      }
+    }
+
+    // Initialize on page load
+    window.addEventListener('DOMContentLoaded', function() {
+      detectLanguage();
+    });
+  </script>
+</body>
+</html>
