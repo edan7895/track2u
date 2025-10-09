@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - The Book of Answers Online</title>
+  <meta name="description" content="Learn about The Book of Answers Online - our mission, history, and commitment to providing thoughtful guidance to our global community.">
+  <meta name="keywords" content="about Book of Answers, online oracle, spiritual guidance, Carol Bolt, digital wellness, mindful reflection">
+  <meta property="og:title" content="About Us - The Book of Answers Online">
+  <meta property="og:description" content="Learn about The Book of Answers Online - our mission, history, and commitment to providing thoughtful guidance to our global community.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bookofanswersonline.com/about-en.html">
+  <meta property="og:image" content="https://bookofanswersonline.com/cover.jpg">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Book of Answers Online",
+    "url": "https://bookofanswersonline.com",
+    "logo": "https://bookofanswersonline.com/logo.png",
+    "description": "An online oracle based on the popular Book of Answers, providing guidance for life's questions.",
+    "foundingDate": "2020",
+    "founder": {
+      "@type": "Person",
+      "name": "Carol Bolt"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Wisdom Street",
+      "addressLocality": "San Francisco",
+      "addressRegion": "CA",
+      "postalCode": "94105",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-123-4567",
+      "contactType": "customer service",
+      "email": "contact@bookofanswersonline.com",
+      "availableLanguage": "English"
+    }
+  }
+  </script>
+  
+  <style>
+    :root {
+      --primary-color: #5d4e75;
+      --secondary-color: #9c89b8;
+      --accent-color: #f0a6ca;
+      --light-color: #f8f5ff;
+      --text-color: #333;
+      --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      --gradient: linear-gradient(135deg, #9c89b8 0%, #f0a6ca 100%);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #f8f5ff 0%, #e6e0ff 100%);
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    header {
+      background: var(--primary-color);
+      color: var(--light-color);
+      padding: 1.2rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .logo i {
+      font-size: 2rem;
+      color: var(--accent-color);
+    }
+    
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    
+    nav a {
+      color: var(--light-color);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: all 0.3s;
+      font-weight: 500;
+    }
+    
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
+    
+    .language-selector {
+      position: relative;
+    }
+    
+    .language-dropdown {
+      background: var(--light-color);
+      color: var(--primary-color);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      appearance: none;
+      padding-right: 2rem;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%235d4e75' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.7rem top 50%;
+      background-size: 16px 12px;
+    }
+    
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--light-color);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: var(--primary-color);
+      flex-direction: column;
+      padding: 1rem;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    
+    .mobile-menu.active {
+      display: flex;
+    }
+    
+    .mobile-menu a {
+      color: var(--light-color);
+      text-decoration: none;
+      padding: 0.8rem 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+    
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      flex: 1;
+    }
+    
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--gradient);
+      border-radius: 3px;
+    }
+    
+    p {
+      margin-bottom: 1.2rem;
+    }
+    
+    .about-hero {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin: 2.5rem 0;
+      padding: 2rem;
+      background: var(--light-color);
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+    
+    .about-hero-content {
+      flex: 2;
+    }
+    
+    .about-hero-image {
+      flex: 1;
+      text-align: center;
+    }
+    
+    .about-hero-image i {
+      font-size: 8rem;
+      color: var(--secondary-color);
+      opacity: 0.8;
+    }
+    
+    .values-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+    }
+    
+    .value-card {
+      background: var(--light-color);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    
+    .value-card i {
+      font-size: 2.5rem;
+      color: var(--secondary-color);
+      margin-bottom: 1rem;
+    }
+    
+    .value-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    
+    .team-section {
+      margin: 3rem 0;
+    }
+    
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .team-member {
+      text-align: center;
+      padding: 1.5rem;
+    }
+    
+    .team-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: var(--gradient);
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 3rem;
+    }
+    
+    .team-member h4 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    
+    .team-member p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+    
+    .compliance-section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #eee;
+    }
+    
+    .compliance-section h3 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    
+    .compliance-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    
+    .compliance-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+    
+    .compliance-item i {
+      color: var(--secondary-color);
+      margin-top: 0.2rem;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: var(--primary-color);
+      color: var(--light-color);
+      margin-top: auto;
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      .header-content {
+        flex-wrap: wrap;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+      
+      .hamburger {
+        display: block;
+      }
+      
+      main {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+      
+      .about-hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .about-hero-image i {
+        font-size: 6rem;
+      }
+      
+      .values-container {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <i class="fas fa-book-open"></i>
+        <h1>Book of Answers Online</h1>
+      </div>
+      
+      <nav>
+        <div class="nav-links">
+      <a href="index-en.html">Home</a>
+      <a href="daily-inspiration-en.html">Daily Inspiration</a>
+      <a href="horoscope-en.html" class="active">Daily Horoscope</a>
+      <a href="how-it-work-en.html">How It Work</a>
+      <a href="about-en.html">About Us</a>
+      <a href="privacy-en.html">Privacy</a>
+      <a href="terms-en.html">Terms of Use</a>
+      <a href="contact-en.html">Contact Us</a>
+        </div>
+        
+        <div class="language-selector"style="display: none;">
+          <select class="language-dropdown" id="language-select">
+            <option value="index-en.html">English</option>
+            <option value="index-zh.html">中文</option>
+            <option value="index-es.html">Español</option>
+            <option value="index-de.html">Deutsch</option>
+            <option value="index-fr.html">Français</option>
+          </select>
+        </div>
+        
+        <button class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+    
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index-en.html">Home</a>
+      <a href="daily-inspiration-en.html">Daily Inspiration</a>
+      <a href="horoscope-en.html" class="active">Daily Horoscope</a>
+      <a href="how-it-work-en.html">How It Work</a>
+      <a href="about-en.html">About Us</a>
+      <a href="privacy-en.html">Privacy</a>
+      <a href="terms-en.html">Terms of Use</a>
+      <a href="contact-en.html">Contact Us</a>
+    </div>
+  </header>
+
+  <main>
+    <h2>About The Book of Answers Online</h2>
+    
+    <div class="about-hero">
+      <div class="about-hero-content">
+        <h2>Our Story</h2>
+        <p>
+          The Book of Answers Online was founded in 2025 as a digital adaptation of the beloved 
+          physical book created by Carol Bolt. Our mission is to bring the wisdom and inspiration 
+          of the original Book of Answers to a global audience through an accessible, user-friendly 
+          online platform.
+        </p>
+        <p>
+          Recognizing the growing need for moments of reflection and guidance in our fast-paced digital 
+          world, our team set out to create a space where people could pause, reflect, and find 
+          perspective on life's questions - no matter where they are or what time it is.
+        </p>
+      </div>
+      <div class="about-hero-image">
+        <i class="fas fa-book"></i>
+      </div>
+    </div>
+
+    <h2>Our Mission & Vision</h2>
+    <p>
+      At The Book of Answers Online, our mission is to provide a digital sanctuary for reflection, 
+      perspective, and intuitive guidance. We believe that in today's fast-paced world, people 
+      need accessible tools to help them pause, reflect, and connect with their inner wisdom.
+    </p>
+    <p>
+      Our vision is to become the world's most trusted digital platform for mindful reflection 
+      and intuitive guidance, serving millions of users globally while maintaining the integrity, 
+      simplicity, and wisdom of the original Book of Answers concept.
+    </p>
+
+    <div class="values-container">
+      <div class="value-card">
+        <i class="fas fa-heart"></i>
+        <h3>Integrity</h3>
+        <p>We maintain transparency in our operations and honest communication with our users and partners.</p>
+      </div>
+      <div class="value-card">
+        <i class="fas fa-users"></i>
+        <h3>Community</h3>
+        <p>We foster a supportive global community where people can explore life's questions together.</p>
+      </div>
+      <div class="value-card">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Innovation</h3>
+        <p>We continuously improve our platform while respecting the timeless wisdom of the original concept.</p>
+      </div>
+      <div class="value-card">
+        <i class="fas fa-globe"></i>
+        <h3>Accessibility</h3>
+        <p>We believe reflective guidance should be available to everyone, everywhere, in their native language.</p>
+      </div>
+    </div>
+
+    <h2>Our Approach to Digital Wellness</h2>
+    <p>
+      The Book of Answers Online is designed as a tool for reflection rather than prediction. 
+      We carefully emphasize that our platform does not provide fortune-telling services or 
+      guarantee specific outcomes. Instead, we offer thoughtfully crafted responses designed 
+      to spark introspection, provide perspective, and help users access their own inner wisdom.
+    </p>
+    <p>
+      Our content is carefully curated to be uplifting, thought-provoking, and appropriate 
+      for users of all backgrounds. We maintain a strict policy against harmful, misleading, 
+      or potentially dangerous advice, ensuring that all responses align with our commitment 
+      to user wellbeing and ethical digital practices.
+    </p>
+
+
+    <div class="compliance-section">
+      <h3>Advertising & Compliance Information</h3>
+      <div class="compliance-list">
+        <div class="compliance-item">
+          <i class="fas fa-check-circle"></i>
+          <div>
+            <strong>Content Integrity:</strong> We maintain clear separation between editorial content and advertising, ensuring our core service remains unbiased and authentic.
+          </div>
+        </div>
+        <div class="compliance-item">
+          <i class="fas fa-shield-alt"></i>
+          <div>
+            <strong>User Privacy:</strong> We adhere to GDPR, CCPA, and other privacy regulations with a comprehensive Privacy Policy that clearly outlines our data practices.
+          </div>
+        </div>
+        <div class="compliance-item">
+          <i class="fas fa-user-check"></i>
+          <div>
+            <strong>Appropriate Content:</strong> All content on our platform is family-friendly and suitable for general audiences, with strict moderation against harmful material.
+          </div>
+        </div>
+        <div class="compliance-item">
+          <i class="fas fa-balance-scale"></i>
+          <div>
+            <strong>Transparent Business Practices:</strong> We provide clear information about our business operations, ownership, and contact details for verification purposes.
+          </div>
+        </div>
+        <div class="compliance-item">
+          <i class="fas fa-hand-holding-heart"></i>
+          <div>
+            <strong>Ethical Standards:</strong> We maintain high ethical standards in all our operations, partnerships, and user interactions, with a commitment to positive social impact.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Our Commitment to Users</h2>
+    <p>
+      We are committed to providing a safe, respectful, and valuable experience for all our users. 
+      Our platform is designed to be inclusive, accessible, and free from discrimination. 
+      We continuously work to improve our service based on user feedback while staying true 
+      to the original spirit of The Book of Answers as a tool for reflection and perspective.
+    </p>
+    <p>
+      Thank you for being part of our community. We appreciate your trust and are committed 
+      to maintaining the highest standards of quality, integrity, and service as we continue 
+      to grow and evolve.
+    </p>
+
+    <!-- SEO Keywords -->
+    <p style="display:none;">
+      Keywords: about Book of Answers, online oracle about us, digital wellness platform, 
+      Carol Bolt digital adaptation, reflective guidance tool, mindfulness app, 
+      spiritual technology company, ethical digital platform, our mission and values.
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2025 Book of Answers Online | All Rights Reserved | <a href="privacy-en.html" style="color: var(--light-color);">Privacy Policy</a> | <a href="terms-en.html" style="color: var(--light-color);">Terms of Service</a>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('active');
+    });
+
+    // Language selector functionality
+    document.getElementById('language-select').addEventListener('change', function() {
+      window.location.href = this.value;
+    });
+
+    // Auto-detect user language and set dropdown accordingly
+    function detectLanguage() {
+      const userLang = navigator.language || navigator.userLanguage;
+      const langSelect = document.getElementById('language-select');
+      
+      // Map browser languages to our available options
+      const langMap = {
+        'zh': 'index-zh.html',
+        'es': 'index-es.html',
+        'de': 'index-de.html',
+        'fr': 'index-fr.html'
+      };
+      
+      // Check if the user's language is in our map
+      const langCode = userLang.split('-')[0];
+      if (langMap[langCode] && window.location.pathname.endsWith('index-en.html')) {
+        // Only redirect if we're on the English page and user prefers another language
+        window.location.href = langMap[langCode];
+      }
+      
+      // Set the dropdown to current language
+      const currentPage = window.location.pathname.split('/').pop();
+      for (let i = 0; i < langSelect.options.length; i++) {
+        if (langSelect.options[i].value === currentPage) {
+          langSelect.selectedIndex = i;
+          break;
+        }
+      }
+    }
+
+    // Initialize on page load
+    window.addEventListener('DOMContentLoaded', function() {
+      detectLanguage();
+    });
+  </script>
+</body>
+</html>

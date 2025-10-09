@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /tmp/
+Disallow: /test/
+Sitemap: https://bookofanswersonline.com/sitemap.xml

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - The Book of Answers Online</title>
+  <meta name="description" content="Contact The Book of Answers Online team for inquiries, partnerships, and advertising opportunities.">
+  <meta name="keywords" content="contact Book of Answers, advertising inquiries, business partnerships, customer support">
+  <meta property="og:title" content="Contact Us - The Book of Answers Online">
+  <meta property="og:description" content="Contact The Book of Answers Online team for inquiries, partnerships, and advertising opportunities.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bookofanswersonline.com/contact-en.html">
+  <meta property="og:image" content="https://bookofanswersonline.com/cover.jpg">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Book of Answers Online",
+    "url": "https://bookofanswersonline.com",
+    "logo": "https://bookofanswersonline.com/logo.png",
+    "description": "An online oracle based on the popular Book of Answers, providing guidance for life's questions.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Wisdom Street",
+      "addressLocality": "San Francisco",
+      "addressRegion": "CA",
+      "postalCode": "94105",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-123-4567",
+      "contactType": "customer service",
+      "email": "contact@bookofanswersonline.com",
+      "availableLanguage": "English"
+    }
+  }
+  </script>
+  
+  <style>
+    :root {
+      --primary-color: #5d4e75;
+      --secondary-color: #9c89b8;
+      --accent-color: #f0a6ca;
+      --light-color: #f8f5ff;
+      --text-color: #333;
+      --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      --gradient: linear-gradient(135deg, #9c89b8 0%, #f0a6ca 100%);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #f8f5ff 0%, #e6e0ff 100%);
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    header {
+      background: var(--primary-color);
+      color: var(--light-color);
+      padding: 1.2rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .logo i {
+      font-size: 2rem;
+      color: var(--accent-color);
+    }
+    
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    
+    nav a {
+      color: var(--light-color);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: all 0.3s;
+      font-weight: 500;
+    }
+    
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
+    
+    .language-selector {
+      position: relative;
+    }
+    
+    .language-dropdown {
+      background: var(--light-color);
+      color: var(--primary-color);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      appearance: none;
+      padding-right: 2rem;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%235d4e75' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.7rem top 50%;
+      background-size: 16px 12px;
+    }
+    
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--light-color);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: var(--primary-color);
+      flex-direction: column;
+      padding: 1rem;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    
+    .mobile-menu.active {
+      display: flex;
+    }
+    
+    .mobile-menu a {
+      color: var(--light-color);
+      text-decoration: none;
+      padding: 0.8rem 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+    
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      flex: 1;
+    }
+    
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--gradient);
+      border-radius: 3px;
+    }
+    
+    p {
+      margin-bottom: 1.2rem;
+    }
+    
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin: 2.5rem 0;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .contact-card {
+      background: var(--light-color);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+    
+    .contact-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .contact-card i {
+      color: var(--secondary-color);
+    }
+    
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+    
+    .contact-item i {
+      color: var(--accent-color);
+      margin-top: 0.2rem;
+    }
+    
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .form-group label {
+      font-weight: 500;
+      color: var(--primary-color);
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 0.8rem 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--secondary-color);
+      box-shadow: 0 0 0 2px rgba(156, 137, 184, 0.2);
+    }
+    
+    .submit-button {
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      background: var(--gradient);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: var(--shadow);
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      margin-top: 0.5rem;
+    }
+    
+    .submit-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+    
+    .submit-button:active {
+      transform: translateY(-1px);
+    }
+    
+    .business-info {
+      background: #f9f5eb;
+      border-left: 4px solid var(--accent-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .business-info h3 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    
+    .business-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    
+    .business-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    
+    .business-label {
+      font-weight: 500;
+      color: var(--primary-color);
+    }
+    
+    .compliance-section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #eee;
+    }
+    
+    .compliance-section h3 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    
+    .compliance-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    
+    .compliance-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+    
+    .compliance-item i {
+      color: var(--secondary-color);
+      margin-top: 0.2rem;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: var(--primary-color);
+      color: var(--light-color);
+      margin-top: auto;
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      .header-content {
+        flex-wrap: wrap;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+      
+      .hamburger {
+        display: block;
+      }
+      
+      main {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+      
+      .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .business-details {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <i class="fas fa-book-open"></i>
+        <h1>Book of Answers Online</h1>
+      </div>
+      
+      <nav>
+        <div class="nav-links">
+      <a href="index-en.html">Home</a>
+      <a href="daily-inspiration-en.html">Daily Inspiration</a>
+      <a href="horoscope-en.html" class="active">Daily Horoscope</a>
+      <a href="how-it-work-en.html">How It Work</a>
+      <a href="about-en.html">About Us</a>
+      <a href="privacy-en.html">Privacy</a>
+      <a href="terms-en.html">Terms of Use</a>
+      <a href="contact-en.html">Contact Us</a>
+        </div>
+        
+        <div class="language-selector"style="display: none;">
+          <select class="language-dropdown" id="language-select">
+            <option value="index-en.html">English</option>
+            <option value="index-zh.html">中文</option>
+            <option value="index-es.html">Español</option>
+            <option value="index-de.html">Deutsch</option>
+            <option value="index-fr.html">Français</option>
+          </select>
+        </div>
+        
+        <button class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+    
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index-en.html">Home</a>
+      <a href="daily-inspiration-en.html">Daily Inspiration</a>
+      <a href="horoscope-en.html" class="active">Daily Horoscope</a>
+      <a href="how-it-work-en.html">How It Work</a>
+      <a href="about-en.html">About Us</a>
+      <a href="privacy-en.html">Privacy</a>
+      <a href="terms-en.html">Terms of Use</a>
+      <a href="contact-en.html">Contact Us</a>
+    </div>
+  </header>
+
+  <main>
+    <h2>Contact The Book of Answers Online</h2>
+    <p>
+      Thank you for your interest in The Book of Answers Online. We welcome inquiries about partnerships, 
+      advertising opportunities, media requests, and general feedback. Our team is dedicated to providing 
+      timely responses to all legitimate business inquiries.
+    </p>
+      
+      <div class="contact-form-container">
+        <div class="contact-card">
+          <h3><i class="fas fa-paper-plane"></i> Send Us a Message</h3>
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a topic</option>
+                <option value="advertising">Advertising Inquiry</option>
+                <option value="partnership">Partnership Opportunity</option>
+                <option value="media">Media Inquiry</option>
+                <option value="support">Technical Support</option>
+                <option value="feedback">General Feedback</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-button">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="compliance-section">
+      <h3>Advertising & Compliance Information</h3>
+      <div class="compliance-list">
+        <div class="compliance-item">
+          <i class="fas fa-check-circle"></i>
+          <div>
+            <strong>Ad Policy Compliance:</strong> Our website complies with major advertising platform policies including Google Ads, Facebook Ads, and other reputable networks.
+          </div>
+        </div>
+        <div class="compliance-item">
+          <i class="fas fa-shield-alt"></i>
+          <div>
+            <strong>Privacy Protection:</strong> We adhere to GDPR, CCPA, and other privacy regulations. Our comprehensive Privacy Policy outlines data collection and usage practices.
+          </div>
+        </div>
+        <div class="compliance-item">
+          <i class="fas fa-user-check"></i>
+          <div>
+            <strong>Content Appropriateness:</strong> All content on The Book of Answers Online is family-friendly and suitable for general audiences.
+          </div>
+        </div>
+        <div class="compliance-item">
+          <i class="fas fa-chart-line"></i>
+          <div>
+            <strong>Traffic & Analytics:</strong> Our website maintains consistent traffic with global reach. Analytics reports available for qualified advertising partners.
+          </div>
+        </div>
+        <div class="compliance-item">
+          <i class="fas fa-file-contract"></i>
+          <div>
+            <strong>Legal Documentation:</strong> We can provide necessary documentation for advertising verification including business registration, tax documents, and domain ownership.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEO Keywords -->
+    <p style="display:none;">
+      Keywords: contact Book of Answers, advertising inquiries Book of Answers, business partnerships spiritual website, 
+      media contact online oracle, customer support Book of Answers, ad compliance spiritual content, 
+      advertising opportunities wisdom website.
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2025 Book of Answers Online | All Rights Reserved | <a href="privacy-en.html" style="color: var(--light-color);">Privacy Policy</a> | <a href="terms-en.html" style="color: var(--light-color);">Terms of Service</a>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('active');
+    });
+
+    // Language selector functionality
+    document.getElementById('language-select').addEventListener('change', function() {
+      window.location.href = this.value;
+    });
+
+    // Contact form submission
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+      
+      // In a real implementation, you would send this data to your server
+      // For demonstration, we'll just show an alert
+      alert(`Thank you, ${name}! Your message has been received. We will respond to ${email} within 24-48 hours.`);
+      
+      // Reset form
+      this.reset();
+    });
+
+    // Auto-detect user language and set dropdown accordingly
+    function detectLanguage() {
+      const userLang = navigator.language || navigator.userLanguage;
+      const langSelect = document.getElementById('language-select');
+      
+      // Map browser languages to our available options
+      const langMap = {
+        'zh': 'index-zh.html',
+        'es': 'index-es.html',
+        'de': 'index-de.html',
+        'fr': 'index-fr.html'
+      };
+      
+      // Check if the user's language is in our map
+      const langCode = userLang.split('-')[0];
+      if (langMap[langCode] && window.location.pathname.endsWith('index-en.html')) {
+        // Only redirect if we're on the English page and user prefers another language
+        window.location.href = langMap[langCode];
+      }
+      
+      // Set the dropdown to current language
+      const currentPage = window.location.pathname.split('/').pop();
+      for (let i = 0; i < langSelect.options.length; i++) {
+        if (langSelect.options[i].value === currentPage) {
+          langSelect.selectedIndex = i;
+          break;
+        }
+      }
+    }
+
+    // Initialize on page load
+    window.addEventListener('DOMContentLoaded', function() {
+      detectLanguage();
+    });
+  </script>
+</body>
+</html>
