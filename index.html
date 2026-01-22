@@ -1,1153 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8">
+  <title>Wash2U Car Saloon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Book of Answers Online - Get Instant Guidance for Your Questions</title>
-  <meta name="description" content="Experience The Book of Answers online. Ask your question, click the button, and receive guidance instantly with over 300 possible answers.">
-  <meta name="keywords" content="Book of Answers, online oracle, decision making, fortune telling, ask a question, life guidance, random answers, yes or no, decision helper">
-  <meta property="og:title" content="The Book of Answers Online - Get Instant Guidance">
-  <meta property="og:description" content="Ask your question and let The Book of Answers surprise you with instant guidance. Over 300 possible answers!">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://bookofanswersonline.com/index-en.html">
-  <meta property="og:image" content="https://bookofanswersonline.com/cover.jpg">
-  
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Structured Data for SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "The Book of Answers Online",
-    "description": "An online oracle based on the popular Book of Answers, providing guidance for life's questions.",
-    "applicationCategory": "EntertainmentApplication",
-    "operatingSystem": "Any",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "author": {
-      "@type": "Organization",
-      "name": "Book of Answers Online"
-    }
-  }
-  </script>
-  
+
+  <!-- Font Awesome 图标 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
   <style>
-    :root {
-      --primary-color: #5d4e75;
-      --secondary-color: #9c89b8;
-      --accent-color: #f0a6ca;
-      --light-color: #f8f5ff;
-      --text-color: #333;
-      --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      --gradient: linear-gradient(135deg, #9c89b8 0%, #f0a6ca 100%);
-    }
-    
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
     }
-    
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      background: linear-gradient(135deg, #f8f5ff 0%, #e6e0ff 100%);
-      color: var(--text-color);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      background: #f5f7fa;
+      color: #333;
     }
-    
-    header {
-      background: var(--primary-color);
-      color: var(--light-color);
-      padding: 1.2rem;
+
+    /* ===== Banner Slider ===== */
+.slider {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  animation: slide 12s infinite;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  background-size: contain; /* 关键 */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slide1 { background-image: url("banner1.jpg"); }
+.slide2 { background-image: url("banner2.jpg"); }
+.slide3 { background-image: url("banner3.jpg"); }
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(0); }
+  36% { transform: translateX(-100%); }
+  66% { transform: translateX(-100%); }
+  69% { transform: translateX(-200%); }
+  100% { transform: translateX(-200%); }
+}
+
+
+    /* ===== Content ===== */
+    .container {
+      padding: 30px 20px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .title {
       text-align: center;
-      box-shadow: var(--shadow);
-      position: relative;
-    }
-    
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-      letter-spacing: 1px;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    .logo i {
-      font-size: 2rem;
-      color: var(--accent-color);
-    }
-    
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
-    
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-    }
-    
-    nav a {
-      color: var(--light-color);
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      transition: all 0.3s;
-      font-weight: 500;
-    }
-    
-    nav a:hover {
-      background: rgba(255, 255, 255, 0.15);
-      transform: translateY(-2px);
-    }
-    
-    .language-selector {
-      position: relative;
-    }
-    
-    .language-dropdown {
-      background: var(--light-color);
-      color: var(--primary-color);
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: 500;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      appearance: none;
-      padding-right: 2rem;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%235d4e75' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 0.7rem top 50%;
-      background-size: 16px 12px;
-    }
-    
-    .hamburger {
-      display: none;
-      background: none;
-      border: none;
-      color: var(--light-color);
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-    
-    .mobile-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background: var(--primary-color);
-      flex-direction: column;
-      padding: 1rem;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-      z-index: 1000;
-    }
-    
-    .mobile-menu.active {
-      display: flex;
-    }
-    
-    .mobile-menu a {
-      color: var(--light-color);
-      text-decoration: none;
-      padding: 0.8rem 1rem;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    
-    .mobile-menu a:last-child {
-      border-bottom: none;
-    }
-    
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2.5rem;
-      border-radius: 16px;
-      box-shadow: var(--shadow);
-      flex: 1;
-    }
-    
-    h2 {
-      color: var(--primary-color);
-      margin-bottom: 1.5rem;
-      font-size: 1.8rem;
-      position: relative;
-      padding-bottom: 0.5rem;
-    }
-    
-    h2::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 60px;
-      height: 3px;
-      background: var(--gradient);
-      border-radius: 3px;
-    }
-    
-    p {
-      margin-bottom: 1.2rem;
-    }
-    
-    .book-container {
-      perspective: 1500px;
-      margin: 3rem auto;
-      width: 320px;
-      height: 420px;
-    }
-    
-    .book {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      transform-style: preserve-3d;
-      transition: transform 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-    
-    .book.flipped {
-      transform: rotateY(-180deg);
-    }
-    
-    .book-cover, .book-page {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border-radius: 10px;
-      box-shadow: var(--shadow);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-    }
-    
-    .book-cover {
-      background: linear-gradient(135deg, var(--primary-color) 0%, #7b6b9c 100%);
-      color: white;
-      text-align: center;
-      cursor: pointer;
-      border: 8px solid #f0a6ca;
-    }
-    
-    .book-cover h3 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    }
-    
-    .book-cover p {
-      font-style: italic;
-      margin-top: 1rem;
-    }
-    
-    .book-page {
-      background: #fffdf7;
-      transform: rotateY(180deg);
-      border: 1px solid #e6d8c3;
-      text-align: center;
-      font-size: 1.3rem;
-      line-height: 1.5;
-      color: var(--primary-color);
-      font-weight: 500;
-      background-image: linear-gradient(#f9f5eb 1px, transparent 1px);
-      background-size: 100% 1.5em;
-      background-position: 0 1.2em;
-    }
-    
-    .book-page .answer-text {
-      padding: 1rem;
-      font-family: 'Georgia', serif;
-      font-style: italic;
-    }
-    
-    .ask-button {
-      padding: 1rem 2.5rem;
-      font-size: 1.2rem;
-      background: var(--gradient);
-      color: white;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s;
-      box-shadow: var(--shadow);
-      display: block;
-      margin: 2rem auto;
+      font-size: 26px;
       font-weight: bold;
-      letter-spacing: 0.5px;
+      margin-bottom: 8px;
     }
-    
-    .ask-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    }
-    
-    .ask-button:active {
-      transform: translateY(-1px);
-    }
-    
-    .instructions {
+
+    .subtitle {
       text-align: center;
-      margin-top: 1rem;
       color: #666;
-      font-style: italic;
+      margin-bottom: 25px;
+      font-size: 14px;
     }
-    
-    .features {
+
+    /* ===== Buttons ===== */
+    .link-btn {
       display: flex;
-      justify-content: space-around;
-      margin-top: 3rem;
-      flex-wrap: wrap;
-      gap: 1.5rem;
+      align-items: center;
+      gap: 15px;
+      background: white;
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-bottom: 15px;
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      font-weight: 600;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    
-    .feature {
-      text-align: center;
-      flex: 1;
-      min-width: 200px;
-      padding: 1.5rem;
-      border-radius: 10px;
-      background: var(--light-color);
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+
+    .link-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.12);
     }
-    
-    .feature i {
-      font-size: 2.5rem;
-      color: var(--secondary-color);
-      margin-bottom: 1rem;
+
+    .icon {
+      font-size: 22px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
     }
-    
+
+    .google { background: #4285F4; }
+    .facebook { background: #1877F2; }
+    .instagram {
+      background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf);
+    }
+    .tiktok { background: #000; }
+    .xiaohongshu { background: #ff2e2e; }
+
     footer {
       text-align: center;
-      padding: 1.5rem;
-      background: var(--primary-color);
-      color: var(--light-color);
-      margin-top: auto;
-    }
-    
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-      
-      .header-content {
-        flex-wrap: wrap;
-      }
-      
-      .nav-links {
-        display: none;
-      }
-      
-      .hamburger {
-        display: block;
-      }
-      
-      main {
-        margin: 1rem;
-        padding: 1.5rem;
-      }
-      
-      .book-container {
-        width: 280px;
-        height: 370px;
-      }
-      
-      .book-cover h3 {
-        font-size: 1.7rem;
-      }
-      
-      .book-page {
-        font-size: 1.1rem;
-      }
-      
-      .features {
-        flex-direction: column;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.6rem;
-      }
-      
-      .book-container {
-        width: 250px;
-        height: 340px;
-      }
-      
-      .book-cover h3 {
-        font-size: 1.5rem;
-      }
-      
-      .book-page {
-        font-size: 1rem;
-      }
+      font-size: 12px;
+      color: #aaa;
+      padding: 20px 0 10px;
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="header-content">
-      <div class="logo">
-        <i class="fas fa-book-open"></i>
-        <h1>Book of Answers Online</h1>
-      </div>
-      
-      <nav>
-        <div class="nav-links">
-      <a href="index-en.html">Home</a>
-      <a href="daily-inspiration-en.html">Daily Inspiration</a>
-      <a href="horoscope-en.html" class="active">Daily Horoscope</a>
-      <a href="how-it-work-en.html">How It Work</a>
-      <a href="about-en.html">About Us</a>
-      <a href="privacy-en.html">Privacy</a>
-      <a href="terms-en.html">Terms of Use</a>
-      <a href="contact-en.html">Contact Us</a>
-        </div>
-        
-        <div class="language-selector"style="display: none;">
-          <select class="language-dropdown" id="language-select">
-            <option value="index-en.html">English</option>
-            <option value="index-zh.html">中文</option>
-            <option value="index-es.html">Español</option>
-            <option value="index-de.html">Deutsch</option>
-            <option value="index-fr.html">Français</option>
-          </select>
-        </div>
-        
-        <button class="hamburger" id="hamburger">
-          <i class="fas fa-bars"></i>
-        </button>
-      </nav>
+
+  <!-- Banner -->
+  <div class="slider">
+    <div class="slides">
+      <div class="slide slide1"></div>
+      <div class="slide slide2"></div>
+      <div class="slide slide3"></div>
     </div>
-    
-    <div class="mobile-menu" id="mobile-menu">
-      <a href="index-en.html">Home</a>
-      <a href="daily-inspiration-en.html">Daily Inspiration</a>
-      <a href="horoscope-en.html" class="active">Daily Horoscope</a>
-      <a href="how-it-work-en.html">How It Work</a>
-      <a href="about-en.html">About Us</a>
-      <a href="privacy-en.html">Privacy</a>
-      <a href="terms-en.html">Terms of Use</a>
-      <a href="contact-en.html">Contact Us</a>
-    </div>
-  </header>
+  </div>
 
-  <main>
-    <h2>Welcome to The Book of Answers Online</h2>
-    <p>
-      The Book of Answers is a unique and inspiring way to gain perspective on your questions.
-      First created by Carol Bolt, this book has captivated readers by offering short but meaningful answers to life's uncertainties.
-      Now, you can enjoy this experience online.
-    </p>
-    <p>
-      Simply focus on a question in your mind, click the book below, and allow the Book of Answers to provide its wisdom.
-      With over <strong>300 possible responses</strong>, each answer is designed to inspire reflection, spark new thoughts, or confirm your inner voice.
-    </p>
+  <!-- Links -->
+  <div class="container">
+    <div class="title">Wash2U Car Saloon</div>
+    <div class="subtitle">Professional Car Wash & Detailing</div>
 
-    <h2>Ask the Book</h2>
-    <p class="instructions">Focus on your question, then click the book to reveal your answer</p>
-    
-    <div class="book-container">
-      <div class="book" id="book">
-        <div class="book-cover" onclick="getAnswer()">
-          <h3>The Book of Answers Online</h3>
-          <p>Click to open</p>
-          <i class="fas fa-hand-point-up" style="font-size: 2rem; margin-top: 1rem;"></i>
-        </div>
-        <div class="book-page">
-          <div class="answer-text" id="answer-box"></div>
-        </div>
-      </div>
-    </div>
-    
-    <button class="ask-button" onclick="getAnswer()">Ask a New Question</button>
+    <a class="link-btn" href="https://atomicurl.com/pHD" target="_blank">
+      <div class="icon google"><i class="fa-brands fa-google"></i></div>
+      Google Review
+    </a>
 
+    <a class="link-btn" href="https://www.facebook.com/p/Wash2U-car-saloon-100078692595033/" target="_blank">
+      <div class="icon facebook"><i class="fa-brands fa-facebook-f"></i></div>
+      Facebook
+    </a>
 
-<h2>The Origin of The Book of Answers</h2>
-<p>
-The <strong>Book of Answers</strong> was first created by <strong>Carol Bolt</strong>, an artist and author known for blending creativity with intuitive wisdom. 
-Her idea was simple yet profound — a book that could respond to your questions with short, poetic, and thought-provoking answers. 
-Since its first publication, it has inspired millions around the world to pause, reflect, and trust their inner voice. 
-Today, the <strong>Book of Answers Online</strong> continues this legacy by bringing that same magic to your screen, offering instant access to guidance and inspiration wherever you are.
-</p>
+    <a class="link-btn" href="https://www.instagram.com/wash2u_car_saloon/" target="_blank">
+      <div class="icon instagram"><i class="fa-brands fa-instagram"></i></div>
+      Instagram
+    </a>
 
-<h2>How the Book of Answers Online Works</h2>
-<p>
-The experience is both playful and meaningful. Simply think deeply about your question — it could be about love, career, decisions, or destiny. 
-When you’re ready, click on the virtual book. 
-The system will present a random yet meaningful response drawn from over <strong>300 unique answers</strong>. 
-Each message is designed to feel personal, like a whisper from the universe. 
-People often describe the <strong>Book of Answers Online</strong> as a digital oracle — a space where coincidence and intuition meet. 
-It reminds us that wisdom doesn’t always come from logic alone, but from listening to the subtle guidance within.
-</p>
+    <a class="link-btn" href="https://www.tiktok.com/@wash2ucarsaloon" target="_blank">
+      <div class="icon tiktok"><i class="fa-brands fa-tiktok"></i></div>
+      TikTok
+    </a>
 
-<h2>The Philosophy Behind the Book</h2>
-<p>
-At its heart, the <strong>Book of Answers Online</strong> is not about predicting the future — it’s about helping you connect with your own awareness. 
-When we ask a question with sincerity, we often already hold the answer deep inside us. 
-The book acts as a mirror, reflecting your subconscious understanding back to you in words that feel just right for the moment. 
-This practice aligns with ancient traditions of divination and mindfulness, where randomness is seen not as chaos, but as a form of cosmic order. 
-Many readers find that even if two people ask the same question, the message that appears speaks uniquely to their own situation.
-</p>
-
-<h2>From Printed Pages to Digital Wisdom</h2>
-<p>
-The original printed version of <em>The Book of Answers</em> invited readers to open the book at any page and read the first response they found. 
-Now, the <strong>online version</strong> captures that same sense of mystery through modern technology. 
-With a simple click, users can experience what feels like a meaningful coincidence — the right words appearing at the right time. 
-In a world filled with data and decisions, the <strong>Book of Answers Online</strong> offers a quiet space for reflection, mindfulness, and spiritual exploration. 
-It’s not just entertainment; it’s a reminder to slow down, breathe, and trust the unfolding of life.
-</p>
-
-<h2>Why People Love the Book of Answers Online</h2>
-<p>
-The enduring charm of the Book lies in its simplicity. 
-Unlike complex fortune-telling methods, this tool is intuitive and immediate. 
-People use it to seek comfort, clarity, or even a touch of magic during uncertain times. 
-Some users turn to it daily for inspiration, while others consult it only when facing big life choices. 
-In either case, the message often resonates deeply. 
-Readers describe feelings of calm, insight, or renewed motivation after using the <strong>Book of Answers Online</strong>. 
-It’s a small ritual that brings a moment of peace in a busy world.
-</p>
-
-<h2>How to Get the Most from Your Reading</h2>
-<p>
-To fully enjoy your <strong>Book of Answers Online</strong> experience, take a moment to center yourself before asking. 
-Close your eyes, focus on your breath, and form your question clearly in your mind. 
-Then, click the book and allow the response to appear without judgment. 
-Sometimes the answer will be direct, other times it will be symbolic. 
-Reflect on what it means to you personally. 
-You can even keep a journal of your questions and the answers you receive — over time, patterns and insights may emerge, helping you understand your own journey better.
-</p>
-
-<h2>A Modern Tool for Reflection and Mindfulness</h2>
-<p>
-More than a digital curiosity, the <strong>Book of Answers Online</strong> represents the union of technology and spirituality. 
-It’s a gentle reminder that even in the digital age, wisdom can still be found in silence and simplicity. 
-By engaging with this online oracle, you are practicing mindfulness — tuning into your intuition, your feelings, and your inner truth. 
-Each session becomes a mini meditation, guiding you toward self-awareness and balance. 
-Whether you believe in coincidence, destiny, or the subconscious mind, the Book of Answers invites you to explore the mystery of meaning itself.
-</p>
-
-<h2>Final Thoughts</h2>
-<p>
-In a fast-moving world, we often seek quick answers. 
-The <strong>Book of Answers Online</strong> offers something deeper — not just answers, but perspective. 
-It reminds us that life’s greatest insights often come when we pause and listen. 
-So the next time you’re uncertain, let this digital oracle be your gentle companion. 
-Ask, click, reflect, and discover what the universe may be whispering to you today.
-</p>
-
-<!-- SEO Support Text (hidden for layout, not keyword stuffing) -->
-<div style="display:none;">
-Experience The Book of Answers online — a digital oracle offering intuitive and mindful guidance for your questions. 
-Inspired by Carol Bolt’s original creation, this virtual wisdom book helps you find clarity through reflection and insight. 
-Use this online divination tool to explore spiritual messages, gain perspective, and discover thoughtful answers to life’s uncertainties. 
-Ask the Book of Answers anytime and let intuition guide your next decision.
-</div>
-
-
-    
-    <div class="features">
-      <div class="feature">
-        <i class="fas fa-lightbulb"></i>
-        <h3>Instant Guidance</h3>
-        <p>Receive immediate answers to your pressing questions</p>
-      </div>
-      <div class="feature">
-        <i class="fas fa-globe"></i>
-        <h3>Multiple Languages</h3>
-        <p>Available in English, Chinese, Spanish and more</p>
-      </div>
-      <div class="feature">
-        <i class="fas fa-mobile-alt"></i>
-        <h3>Mobile Friendly</h3>
-        <p>Use on any device, anywhere, anytime</p>
-      </div>
-    </div>
-  </main>
+    <a class="link-btn" href="https://xhslink.com/m/JVhLfFMumR" target="_blank">
+      <div class="icon xiaohongshu"><i class="fa-solid fa-book"></i></div>
+      小红书
+    </a>
+  </div>
 
   <footer>
-    &copy; 2025 Book of Answers Online | All Rights Reserved | <a href="privacy-en.html" style="color: var(--light-color);">Privacy Policy</a> | <a href="terms-en.html" style="color: var(--light-color);">Terms of Service</a>
+    © 2026 Wash2U Car Saloon
   </footer>
 
-  <script>
-    // Answers array
-    const answers = [
-      "Yes, definitely.",
-      "No, not now.",
-      "Wait and see.",
-      "Trust your instincts.",
-      "Ask again later.",
-      "The answer is within you.",
-      "Take the first step.",
-      "Be patient.",
-      "It will be worth it.",
-      "Do not doubt it.",
-      "You already know the truth.",
-      "Yes, but with caution.",
-      "Focus on what matters most.",
-      "Take a chance.",
-      "It is not the right time.",
-      "Yes, absolutely.",
-      "No, this path is closed.",
-      "Seek advice from a friend.",
-      "Your heart knows best.",
-      "Yes, with confidence.",
-      "The timing is wrong.",
-      "It will happen soon.",
-      "Stay open-minded.",
-      "Do not be afraid to try.",
-      "Change your perspective.",
-      "A surprise is waiting for you.",
-      "Trust the process.",
-      "Yes, pursue it.",
-      "No, protect yourself.",
-      "Something better is ahead.",
-      "Think twice.",
-      "Move forward bravely.",
-      "Pause and reflect.",
-      "Yes, but compromise is needed.",
-      "No, the risks are high.",
-      "This is your opportunity.",
-      "Patience will pay off.",
-      "Act quickly.",
-      "You are not ready yet.",
-      "The answer is yes.",
-      "The answer is no.",
-      "It will bring joy.",
-      "It will bring challenges.",
-      "Yes, but prepare carefully.",
-      "Now is not the right moment.",
-      "Follow your intuition.",
-      "It will surprise you.",
-      "Take the safe route.",
-      "Take the bold route.",
-      "You already know the answer.",
-      "The universe supports you.",
-      "Be cautious.",
-      "Go for it.",
-      "It's uncertain.",
-      "Yes, but not in the way you expect.",
-      "No, avoid it.",
-      "The outcome is unclear.",
-      "You will succeed.",
-      "Yes, but timing matters.",
-      "Wait patiently.",
-      "Yes, pursue your dream.",
-      "No, focus elsewhere.",
-      "You will be rewarded.",
-      "You will learn from this.",
-      "Yes, but keep it simple.",
-      "No, step back.",
-      "Listen carefully.",
-      "Look within.",
-      "Yes, take the risk.",
-      "No, too many obstacles.",
-      "Something unexpected will help.",
-      "Yes, share your idea.",
-      "No, keep it private.",
-      "You need more information.",
-      "Act decisively.",
-      "Don't give up.",
-      "Yes, enjoy the moment.",
-      "No, protect your peace.",
-      "Follow your dream.",
-      "Let it go.",
-      "The answer will come tomorrow.",
-      "Yes, you are ready.",
-      "No, wait until later.",
-      "It's worth a try.",
-      "It will not be easy.",
-      "Yes, with patience.",
-      "No, stay away.",
-      "Yes, success is near.",
-      "No, danger ahead.",
-      "Yes, celebrate it.",
-      "Think bigger.",
-      "Stay grounded.",
-      "Yes, pursue love.",
-      "No, protect your heart.",
-      "This is the sign you needed.",
-      "Yes, start now.",
-      "No, delay it.",
-      "Yes, take the journey.",
-      "No, stay where you are.",
-      "Yes, but with balance.",
-      "No, too soon.",
-      "Yes, but stay humble.",
-      "No, this will cause regret.",
-      "Yes, follow your passion.",
-      "No, this is not yours.",
-      "The answer is hidden.",
-      "Ask again tomorrow.",
-      "You will be glad you did.",
-      "You will regret it.",
-      "Yes, if you believe.",
-      "No, if you doubt.",
-      "It's not up to you.",
-      "Yes, destiny is calling.",
-      "No, fate says otherwise.",
-      "Look to the east for your answer.",
-      "The stars align in your favor.",
-      "Consult your inner wisdom.",
-      "The path is clear before you.",
-      "Your doubts are your only obstacle.",
-      "Embrace the unknown.",
-      "Your perseverance will be rewarded.",
-      "Change is coming, be ready.",
-      "Listen to the silence.",
-      "Your question will resolve itself.",
-      "The answer lies in simplicity.",
-      "Trust the journey, not the destination.",
-      "Your intuition is your guide.",
-      "The solution is closer than you think.",
-      "Balance is key.",
-      "Release your expectations.",
-      "The winds of change are blowing.",
-      "Your courage will be tested.",
-      "Patience brings clarity.",
-      "Your efforts will bear fruit.",
-      "A new perspective is needed.",
-      "The answer will come in a dream.",
-      "Follow the signs around you.",
-      "Your faith will be rewarded.",
-      "The answer is in motion.",
-      "Look beyond the obvious.",
-      "Your question holds the answer.",
-      "The time is now.",
-      "Your heart knows the way.",
-      "The universe is conspiring in your favor.",
-      "Your determination will see you through.",
-      "A leap of faith is required.",
-      "The answer is in the journey.",
-      "Trust the timing of your life.",
-      "Your question is its own answer.",
-      "The solution requires action.",
-      "Your vision will become clear.",
-      "The answer is in your hands.",
-      "Your path is uniquely yours.",
-      "The answer is written in the stars.",
-      "Your question is the beginning of wisdom.",
-      "The answer is in the connection.",
-      "Your strength will carry you.",
-      "The answer is in the letting go.",
-      "Your question will lead to growth.",
-      "The answer is in the balance.",
-      "Your curiosity will be rewarded.",
-      "The answer is in the stillness.",
-      "Your question is a gift.",
-      "The answer is in the sharing.",
-      "Your journey is the destination.",
-      "The answer is in the love.",
-      "Your question is the key.",
-      "The answer is in the now.",
-      "Your heart will show the way.",
-      "The answer is in the truth.",
-      "Your question is the path.",
-      "The answer is in the light.",
-      "Your spirit knows the answer.",
-      "The answer is in the harmony.",
-      "Your question is the bridge.",
-      "The answer is in the peace.",
-      "Your soul already knows.",
-      "The answer is in the joy.",
-      "Your question is the mirror.",
-      "The answer is in the grace.",
-      "Your being holds the answer.",
-      "The answer is in the unity.",
-      "Your question is the teacher.",
-      "The answer is in the wholeness.",
-      "Your essence knows the truth.",
-      "The answer is in the oneness.",
-      "Your question is the doorway.",
-      "The answer is in the infinite.",
-      "Your consciousness holds the key.",
-      "The answer is in the eternal.",
-      "Your question is the spark.",
-      "The answer is in the divine.",
-      "Your being is the answer.",
-      "The answer is in the love you give.",
-      "Your question is the light.",
-      "The answer is in the love you receive.",
-      "Your heart is the compass.",
-      "The answer is in the love you are.",
-      "Your soul is the guide.",
-      "The answer is in the love that surrounds you.",
-      "Your spirit is the wisdom.",
-      "Good things take time.",
-      "The door will open when you are ready.",
-      "Let destiny unfold naturally.",
-      "You are being guided.",
-      "The truth will reveal itself.",
-      "Something wonderful is on the horizon.",
-      "The answer is closer than you think.",
-      "Take responsibility for your choice.",
-      "Forgive and move forward.",
-      "Your patience will be tested.",
-      "A new beginning awaits.",
-      "Your courage will inspire others.",
-      "You must release control.",
-      "The universe has heard you.",
-      "You are stronger than you believe.",
-      "A lesson will soon be learned.",
-      "You will find what you seek.",
-      "Your kindness will return to you.",
-      "Let your heart lead, not your fear.",
-      "A challenge will reveal your strength.",
-      "Stay true to your purpose.",
-      "The answer will come through silence.",
-      "A door closes, another opens.",
-      "What you resist will persist.",
-      "Your clarity will come with rest.",
-      "A hidden blessing is emerging.",
-      "It’s time to trust again.",
-      "You are exactly where you need to be.",
-      "Let go of the need to know.",
-      "You have all the tools you need.",
-      "Someone unexpected will guide you.",
-      "Your energy attracts your reality.",
-      "What you give, you will receive.",
-      "The outcome depends on your attitude.",
-      "Stay grounded and grateful.",
-      "Follow the feeling, not the logic.",
-      "You are entering a new chapter.",
-      "Seek harmony, not victory.",
-      "Be still and listen.",
-      "You will soon understand why.",
-      "Your joy will guide you home.",
-      "A long-awaited answer will come soon.",
-      "Let go of old fears.",
-      "A peaceful resolution is near.",
-      "You will see the signs clearly.",
-      "Everything happens for a reason.",
-      "It’s time to make peace with the past.",
-      "Your light is needed in the world.",
-      "Take one step at a time.",
-      "An opportunity will present itself soon.",
-      "Your heart is wiser than your mind.",
-      "Miracles are unfolding quietly.",
-      "Allow yourself to receive.",
-      "The truth will set you free.",
-      "Take nothing personally.",
-      "The answer will arrive in an unexpected way.",
-      "A reunion will bring joy.",
-      "Release what no longer serves you.",
-      "Your calmness is your power.",
-      "Act from love, not fear.",
-      "You are ready for transformation.",
-      "Let go and trust the process.",
-      "A cycle is coming to completion.",
-      "Your voice matters.",
-      "Seek balance in all things.",
-      "The next step will reveal itself.",
-      "A blessing is disguised as a challenge.",
-      "You already have the answer within.",
-      "Listen to your dreams.",
-      "Change your mindset to change your outcome.",
-      "You will rise stronger than before.",
-      "Follow the light within you.",
-      "Be brave enough to begin again.",
-      "What seems lost will be found.",
-      "Be kind to yourself.",
-      "You are growing in unseen ways.",
-      "This is a test of faith.",
-      "Your inner strength will surprise you.",
-      "Something beautiful is forming.",
-      "Do not rush the process.",
-      "The answer will come with clarity.",
-      "Be open to unexpected blessings.",
-      "Your intuition was right.",
-      "The past no longer defines you.",
-      "Everything is aligning perfectly.",
-      "The lesson is complete.",
-      "A new connection will open doors.",
-      "Stay centered in gratitude.",
-      "You are being protected.",
-      "Release the need to control outcomes.",
-      "Trust that you are enough.",
-      "A breakthrough is near.",
-      "Your truth will shine through.",
-      "It’s time to forgive yourself.",
-      "Let joy be your compass.",
-      "Something better is waiting to emerge.",
-      "Your focus will determine your success.",
-      "Don’t be afraid to start over.",
-      "You are being called to action.",
-      "A calm heart will find the way.",
-      "You are ready for change.",
-      "Keep moving forward with faith.",
-      "Your dream is within reach.",
-      "The universe is working behind the scenes.",
-      "Your effort will be recognized.",
-      "Let love lead the way.",
-      "Take a deep breath and trust.",
-      "Your patience will soon be rewarded.",
-      "Something you desire is on its way.",
-      "You are entering a time of abundance.",
-      "Allow yourself to rest.",
-      "What you seek is seeking you.",
-      "Your answer will arrive with clarity.",
-      "You will receive exactly what you need.",
-      "Open your heart to new possibilities.",
-      "You are safe to express your truth.",
-      "The answer lies in forgiveness.",
-      "Look beyond appearances.",
-      "Your perspective will shift everything.",
-      "You are being divinely guided.",
-      "The moment to act is approaching.",
-      "A peaceful outcome is assured.",
-      "Your words have power—use them wisely.",
-      "Your intuition is your superpower.",
-      "The timing will be perfect.",
-      "You are walking the right path.",
-      "Do not be discouraged by delays.",
-      "It’s time to simplify.",
-      "What’s meant for you cannot be lost.",
-      "The answer is on its way.",
-      "You will soon find clarity.",
-      "The key lies in compassion.",
-      "Your energy creates your future.",
-      "Let go of the ‘how’.",
-      "Your presence is the answer.",
-      "The mystery will soon unfold.",
-      "Let yourself be guided by curiosity.",
-      "Something unseen is supporting you.",
-      "The universe is aligning for your good.",
-      "Trust the unfolding of events.",
-      "You are more powerful than you realize.",
-      "Stay flexible and adapt.",
-      "Everything will make sense soon.",
-      "The answer lies in acceptance.",
-      "Focus on what you can control.",
-      "Your honesty will bring freedom.",
-      "Be patient with your own growth.",
-      "You are entering a phase of renewal.",
-      "The answer will be revealed in stillness.",
-      "Your light will guide others.",
-      "Take responsibility for your happiness.",
-      "Your intuition was correct all along.",
-      "This change is a blessing in disguise.",
-      "The solution is simpler than you think.",
-      "Release your attachment to the outcome.",
-      "Your gratitude will open doors.",
-      "It’s time to surrender to what is.",
-      "Trust the lessons you are learning.",
-      "You are awakening to your true path.",
-      "Everything is happening in divine timing.",
-      "What you imagine will become real.",
-      "Your peace is your power.",
-      "An unexpected answer is coming soon.",
-      "Your confidence will attract success.",
-      "You are being tested, not punished.",
-      "Let life flow naturally.",
-      "Your alignment will bring clarity.",
-      "This ending is a new beginning.",
-      "The answer lies in humility.",
-      "Your joy will return.",
-      "You are ready for expansion.",
-      "Let go of fear and trust the unknown.",
-      "Your perseverance will create miracles.",
-      "Something important is being revealed.",
-      "You are on the verge of a discovery.",
-      "Listen to your inner whisper.",
-      "A sudden change will lead to freedom.",
-      "Clarity comes through rest, not effort.",
-      "What’s gone was never meant to stay.",
-      "A truth will be illuminated.",
-      "Your peace will attract the answer.",
-      "The universe is saying yes.",
-      "Your question will open new doors.",
-      "You are being guided to a higher path.",
-      "The answer lies in simplicity and grace.",
-      "Trust your higher self.",
-      "Your compassion will bring healing.",
-      "The time for waiting is over.",
-      "You are in tune with destiny.",
-      "Something miraculous is forming.",
-      "Let go and rise higher.",
-      "Your love is your greatest strength.",
-      "This experience will shape your wisdom.",
-      "Follow where your peace leads.",
-      "Your awareness is expanding.",
-      "Be open to divine timing.",
-      "The answer lies in stillness, not struggle.",
-      "You are being prepared for greatness.",
-      "Your vision is becoming reality.",
-      "Trust your unique path.",
-      "An unexpected ally will appear.",
-      "Release the old to make room for new.",
-      "The universe supports your intention.",
-      "Everything you need is already here.",
-      "Your heart’s desire is manifesting.",
-      "Stay true to what feels right.",
-      "Your patience is your strength.",
-      "The answer will reveal itself in time.",
-      "Don’t chase, attract.",
-      "You are exactly on schedule.",
-      "Something wonderful is unfolding.",
-      "Your peace will lead to success.",
-      "This is a test of trust.",
-      "You are being guided toward alignment.",
-      "The answer lies in silence.",
-      "Your surrender will bring peace.",
-      "The universe is whispering, listen closely.",
-      "Let the answer find you.",
-      "You are loved beyond measure.",
-      "The answer lies in gratitude.",
-      "Trust what feels light and true.",
-      "You are being divinely protected.",
-      "The truth is within your reach.",
-      "Your presence is enough.",
-      "Be still, the answer is coming.",
-      "The universe moves through you.",
-      "Your faith will open the door.",
-      "A gift is on its way.",
-      "Everything will align perfectly soon.",
-      "Trust the unseen forces at work.",
-      "The answer will unfold naturally.",
-      "Let your inner peace be your guide.",
-      "You are on the right frequency.",
-      "The signs are all around you.",
-      "Your question has already been answered.",
-      "Stay open and receptive.",
-      "The answer will bring peace.",
-      "You are guided, always.",
-      "Your inner knowing is the truth.",
-      "Let go of resistance.",
-      "The path will clear itself.",
-      "Your calmness will attract clarity.",
-      "The answer lies in your surrender.",
-      "You are becoming who you are meant to be.",
-      "Your question will awaken new insight.",
-      "The universe answers in its own time.",
-      "What you seek is within reach.",
-      "You will soon receive confirmation.",
-      "The answer will come when you least expect.",
-      "Trust that you are guided every step.",
-      "Your truth is your power.",
-      "You are in divine alignment.",
-      "The right people will appear.",
-      "Trust your path, even if unseen.",
-      "A moment of clarity is approaching.",
-      "Your peace will reveal the answer.",
-      "You are the answer you seek.",
-      "Everything is unfolding in perfect harmony.",
-      "The answer lies in your next breath.",
-      "You are supported beyond measure.",
-      "Trust that love leads the way.",
-      "The solution is already forming.",
-      "You are exactly where you belong.",
-      "The universe always says yes to truth.",
-      "The answer is in your presence.",
-      "Your next step will bring light.",
-      "Everything is as it should be.",
-      "Listen—not with your ears, but your heart.",
-      "You are never alone.",
-      "The answer lies in your intention.",
-      "You are on the path of awakening.",
-      "The answer will echo through silence.",
-      "Let go, and everything will flow.",
-      "You already hold the key.",
-      "The answer is written in your soul.",
-      "The answer is in the love that connects us all."
-    ];
-
-    // Get answer function with book flip animation
-    function getAnswer() {
-      const book = document.getElementById('book');
-      const answerBox = document.getElementById('answer-box');
-      
-      // If the book is already flipped, reset it first
-      if (book.classList.contains('flipped')) {
-        book.classList.remove('flipped');
-        
-        // Wait for the flip back animation to complete
-        setTimeout(() => {
-          const randomIndex = Math.floor(Math.random() * answers.length);
-          answerBox.textContent = answers[randomIndex];
-          book.classList.add('flipped');
-        }, 600);
-      } else {
-        // First time flipping
-        const randomIndex = Math.floor(Math.random() * answers.length);
-        answerBox.textContent = answers[randomIndex];
-        book.classList.add('flipped');
-      }
-    }
-
-    // Mobile menu toggle
-    document.getElementById('hamburger').addEventListener('click', function() {
-      document.getElementById('mobile-menu').classList.toggle('active');
-    });
-
-    // Language selector functionality
-    document.getElementById('language-select').addEventListener('change', function() {
-      window.location.href = this.value;
-    });
-
-    // Auto-detect user language and set dropdown accordingly
-    function detectLanguage() {
-      const userLang = navigator.language || navigator.userLanguage;
-      const langSelect = document.getElementById('language-select');
-      
-      // Map browser languages to our available options
-      const langMap = {
-        'zh': 'index-zh.html',
-        'es': 'index-es.html',
-        'de': 'index-de.html',
-        'fr': 'index-fr.html'
-      };
-      
-      // Check if the user's language is in our map
-      const langCode = userLang.split('-')[0];
-      if (langMap[langCode] && window.location.pathname.endsWith('index-en.html')) {
-        // Only redirect if we're on the English page and user prefers another language
-        window.location.href = langMap[langCode];
-      }
-      
-      // Set the dropdown to current language
-      const currentPage = window.location.pathname.split('/').pop();
-      for (let i = 0; i < langSelect.options.length; i++) {
-        if (langSelect.options[i].value === currentPage) {
-          langSelect.selectedIndex = i;
-          break;
-        }
-      }
-    }
-
-    // Initialize on page load
-    window.addEventListener('DOMContentLoaded', function() {
-      detectLanguage();
-    });
-  </script>
 </body>
 </html>
