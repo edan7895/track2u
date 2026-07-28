@@ -1,145 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Car Wash Near Me | Premium Car Wash in Selangor & KL | Wash2U Malaysia</title>
-<meta name="description" content="Looking for the best car wash near me? Wash2U Malaysia provides premium car wash & detailing services in Selayang, Rawang & Cheras. 10,000+ satisfied customers.">
-
-<meta name="geo.region" content="MY-10">
-<meta name="geo.placename" content="Selangor, Kuala Lumpur">
-<meta name="geo.position" content="3.1390;101.6869">
-
-<link rel="stylesheet" href="assets/css/style.css">
-<script defer src="assets/js/script.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>实时体育比分 · 集锦中心</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+    <!-- 顶部导航 -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <span>Sport<span class="highlight">Hub</span></span>
+            </div>
+            <div class="header-status">
+                <span class="live-dot"></span>
+                <span id="lastUpdate">实时更新中</span>
+                <span class="divider">|</span>
+                <span id="updateCountdown">60s</span>
+            </div>
+            <div class="header-actions">
+                <button id="refreshBtn" class="btn-refresh" title="手动刷新">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+        </div>
+    </header>
 
-<header>
-<div class="logo">Wash2U Malaysia</div>
-<nav>
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="locations.html">Locations</a>
-<a href="blog.html">Blog</a>
-<a href="contact.html">Contact</a>
-</nav>
-<a href="tel:+60123456789" class="btn">Call Now</a>
-</header>
+    <!-- 筛选栏 -->
+    <section class="filter-bar">
+        <div class="filter-container">
+            <button class="filter-btn active" data-sport="all">
+                <i class="fas fa-globe"></i> 全部
+            </button>
+            <button class="filter-btn" data-sport="football">
+                <i class="fas fa-futbol"></i> 足球
+            </button>
+            <button class="filter-btn" data-sport="basketball">
+                <i class="fas fa-basketball-ball"></i> 篮球
+            </button>
+            <button class="filter-btn" data-sport="rugby">
+                <i class="fas fa-football"></i> 橄榄球
+            </button>
+            <button class="filter-btn" data-sport="badminton">
+                <i class="fas fa-shuttlecock"></i> 羽毛球
+            </button>
+            <button class="filter-btn" data-sport="other">
+                <i class="fas fa-ellipsis-h"></i> 其他
+            </button>
+        </div>
+    </section>
 
-<section class="hero">
-<h1>Premium Car Wash & Detailing Services in Selangor</h1>
-<p>Serving 10,000+ satisfied customers across Selangor & Kuala Lumpur</p>
-<a href="contact.html" class="btn">Book Now</a>
-</section>
+    <!-- 主内容 -->
+    <main class="main-content">
+        <div class="container">
+            <div id="matchesGrid" class="matches-grid">
+                <!-- 由 JS 动态渲染 -->
+            </div>
+            <div id="loadingState" class="loading-state">
+                <div class="spinner"></div>
+                <p>正在加载赛事数据...</p>
+            </div>
+            <div id="errorState" class="error-state" style="display:none;">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p id="errorMessage">获取数据失败，请稍后重试</p>
+                <button id="retryBtn" class="btn-retry">重新加载</button>
+            </div>
+            <div id="emptyState" class="empty-state" style="display:none;">
+                <i class="fas fa-tv"></i>
+                <p>暂无匹配的赛事</p>
+            </div>
+        </div>
+    </main>
 
-<section class="section">
-<div class="container">
-<h2>Why We Are the Best Car Wash Near You</h2>
-<p>If you are searching for a <strong>car wash near me</strong> in Selayang, Rawang, or Cheras, Wash2U Malaysia delivers premium automotive detailing with 5-star rated service.</p>
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <i class="fas fa-video"></i>
+                数据来源 · RapidAPI 足球集锦 &nbsp;|&nbsp;
+                自动刷新间隔 60 秒
+            </p>
+            <p class="footer-sub">© 2026 SportHub · 仅供个人学习使用</p>
+        </div>
+    </footer>
 
-<div class="grid grid-3">
-<div class="card">
-<h3>Exterior Wash</h3>
-<p>Deep foam wash with premium products.</p>
-</div>
-<div class="card">
-<h3>Polishing</h3>
-<p>Remove swirl marks and restore gloss.</p>
-</div>
-<div class="card">
-<h3>Coating</h3>
-<p>Long-lasting ceramic protection.</p>
-</div>
-</div>
-
-</div>
-</section>
-
-<section class="section dark">
-<div class="container">
-<h2>Our Locations in Selangor & Kuala Lumpur</h2>
-
-<div class="grid grid-3">
-
-<div class="card">
-<h3>Wash2U Lotus’s Selayang</h3>
-<p class="rating">4.8★ (261+ Reviews)</p>
-<p>Car wash in Selayang near Lotus’s Selayang.</p>
-<a href="locations.html" class="btn">Get Directions</a>
-</div>
-
-<div class="card">
-<h3>Wash2U Lotus’s Rawang</h3>
-<p class="rating">4.9★ (292+ Reviews)</p>
-<p>Car wash in Rawang near Rawang Mall.</p>
-<a href="locations.html" class="btn">Get Directions</a>
-</div>
-
-<div class="card">
-<h3>Wash2U YouCity Retail</h3>
-<p class="rating">5.0★ (76+ Reviews)</p>
-<p>Car wash in Cheras near You City Retail Mall.</p>
-<a href="locations.html" class="btn">Get Directions</a>
-</div>
-
-</div>
-</div>
-</section>
-
-<section class="section">
-<div class="container">
-<h2>Frequently Asked Questions</h2>
-
-<h3>How much is car wash in Selangor?</h3>
-<p>Car wash prices in Selangor range from RM15 to RM50 depending on vehicle size and services selected.</p>
-
-<h3>Where is the best car wash near me?</h3>
-<p>Wash2U Malaysia is one of the highest-rated car wash centers in Selayang, Rawang and Cheras.</p>
-
-<h3>How long does a car wash take?</h3>
-<p>Standard wash takes 30–45 minutes. Full detailing may take 2–4 hours.</p>
-
-<h3>What is the difference between polishing and coating?</h3>
-<p>Polishing restores paint shine. Coating adds long-term protective layer.</p>
-
-<h3>How often should I wash my car in Malaysia?</h3>
-<p>We recommend every 1–2 weeks due to Malaysia’s weather and rain exposure.</p>
-
-<h3>Do you offer interior detailing?</h3>
-<p>Yes, including deep vacuum, leather cleaning and odor removal.</p>
-
-<h3>Is car coating worth it?</h3>
-<p>Yes. Ceramic coating protects against UV rays, rain and dirt buildup.</p>
-
-<h3>Which outlet has the highest rating?</h3>
-<p>Our Cheras YouCity outlet currently holds a 5.0★ rating.</p>
-
-</div>
-</section>
-
-<footer>
-<p>© 2026 Wash2U Malaysia | Premium Car Wash in Selangor & KL</p>
-</footer>
-
-<a href="https://wa.me/60123456789" class="whatsapp-float">WhatsApp</a>
-
-<!-- JSON-LD LocalBusiness + FAQ Schema -->
-<script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"AutoWash",
-"name":"Wash2U Malaysia",
-"areaServed":["Selangor","Kuala Lumpur"],
-"aggregateRating":{
-"@type":"AggregateRating",
-"ratingValue":"4.9",
-"reviewCount":"629"
-}
-}
-</script>
-
+    <script src="app.js"></script>
 </body>
 </html>
